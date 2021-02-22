@@ -1,11 +1,13 @@
-console.log("ok");
-const number = document.querySelector('.input').value;
-let submit = document.querySelector('.submit');
+const tag = "&#128520"
+let element = document.createElement("span");
+const str = document.querySelector('.input');
+const submit = document.querySelector('.submit');
+
 
 function logSubmit () {
-  if(text.value.length < 100)
-    message.innerHTML += "Please submit at least 100 chracters.";
-  else
-    message.innerHTML="";
+  let number = parseInt(str.value);
+  element.innerHTML = tag.repeat(number);
+  document.body.appendChild(element);
 }
+
 submit.addEventListener('click',logSubmit);
