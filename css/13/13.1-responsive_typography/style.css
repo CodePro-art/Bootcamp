@@ -1,0 +1,35 @@
+
+body {
+ font-family: "Source Sans Pro", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #2C3043;
+}
+
+.container {
+ padding-top: 5%;
+  margin: auto;
+  width: 80%;
+}
+.red {
+  color: #FC6057;
+}
+
+.green {
+  color: #01A787;
+}
+.orange {
+  color: #1BC1A1;
+}
+
+@media(max-width: 820px){
+  .container {
+    display: block;
+    width: 100%;
+  }
+  .col{
+    display:block;
+    width: 100%;
+    height: auto;
+  }
+}

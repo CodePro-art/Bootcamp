@@ -1,0 +1,322 @@
+/* ---------------------------- HEADER nav-bar -------------------- */
+/* nav-top */
+header .nav-top {
+  display: flex;
+  flex-wrap: wrap;
+  height: 60px;
+  background-color: #131921;
+}
+
+/* nav-bottom */
+header .nav-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  height: 39px;
+  background-color: #232F3E;
+}
+
+/* ------------ nav: General position -> left fill and right ------------------- */
+
+/* left *//* fill *//* right */
+header .nav-left,
+header .nav-fill,
+header .nav-right {
+  display: flex;
+  height: inherit;
+}
+header .nav-fill {
+  flex: 1;
+}
+header .nav-top .nav-fill {
+  max-width: 70vw;
+  min-width: 51vw;
+}
+
+/* ================================================= */
+/* ------------------------- top nav ----------------------------------- */
+/* ================================================= */
+/*--------------- nav-left -----------------*/
+header .nav-top .nav-left {
+  max-width: 230px;
+  min-width: 230px;
+}
+header .nav-top .nav-left >*{  display: flex;}
+
+header .nav-top .nav-left .logo-wrap {
+  justify-content: center;
+  flex: 1;
+  margin: 1px;
+}
+header .nav-top .nav-left .logo-wrap .nav-logo {
+  max-width: 135px;
+  display: flex;
+  margin: 1px 0px;
+  padding: 1px 2px 0px 6px ;
+}
+header .nav-top .nav-left .logo-wrap .nav-logo .nav-logo-locale{ 
+  align-self:center;
+  padding-bottom: 7px;
+}
+header .nav-top .nav-left .logo-wrap .nav-logo .logo-sprite {
+  display: flex;
+  flex: 1;
+  width: 97px;
+  max-width: 97px;
+  height: auto;
+  background: url(../img/amazon_logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-decoration: none;
+  padding: 3px 8px 0 6px;
+  margin: 5px 0px 5px;
+}
+
+header .nav-top .nav-left .location-wrap {
+  min-width: 75px;
+  display: flex;
+  align-items: center;
+  margin: 2px 4px;
+  padding: 0px 3px;
+
+}
+header .nav-top .nav-left .location-wrap .nav-sprite {
+  background: url(https://images-na.ssl-images-amazon.com/images/G/01/gno/sprites/nav-sprite-global-1x-hm-dsk-reorg._CB405937547_.png) repeat-x -71px -378px;
+  width: 18px;
+  height: 18px;
+}
+
+header .nav-bottom .nav-left .icon:hover,
+header .nav-bottom .nav-fill .link-list .item:hover,
+header .nav-top .nav-left .location-wrap:hover,
+header .nav-top .nav-left .logo-wrap .nav-logo:hover,
+header .nav-top .nav-right .account-orders-cart .account-wrapper:hover,
+header .nav-top .nav-right .account-orders-cart .orders-wrapper:hover,
+header .nav-top .nav-right .account-orders-cart .cart-wrapper:hover {
+  box-shadow: 0 0 0px 1px white;
+  border-radius: 1px;
+}
+
+/*--------------------- nav-fill -------------------------*/
+header .nav-top .nav-fill .nav-search {
+  text-align: left;
+  width: 100%;
+  align-self: center;
+}
+
+header .nav-top .nav-fill .search-container {
+  position: relative;
+  display: flex;
+  margin: 0px 18px;
+  padding: 0px 4px;
+}
+
+header .nav-top .nav-fill .resizeselect {
+  font-family: "Amazon Ember", Arial, sans-serif;
+  background-color: #f3f3f3;
+  padding-left: 5px;
+  border-radius: 5px 0px 0px 5px;
+  border: 1px solid #f3f3f3;
+  height: 41px;
+  cursor: pointer;
+  color: #838383;
+  order: 0;
+}
+header .nav-top .nav-fill .resizeselect option {
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+header .nav-top .nav-fill .resizeselect:hover {
+  background-color: #dadada;
+  border: 1px solid #dadada;
+  color: #0f1111;
+}
+
+header .nav-top .nav-fill .resizeselect:focus {
+  box-shadow: 0px 0px 0px 2.5px rgb(228, 121, 17);
+  background-color: #dadada;
+  border: 1px solid #dadada;
+  border-right: 2.5px solid rgb(228, 121, 17);
+  color: #0f1111;
+  outline: 0;
+}
+
+header .nav-top .nav-fill #search-bar {
+  text-indent: 8px;
+  flex: 1;
+  padding: 10px 10px 10px 0;
+  min-width: 100px;
+  font-size: 15px;
+  color: #111111;
+  border: 1px solid #cccccc;
+  order: 1;
+}
+
+header .nav-top .nav-fill #search-bar:focus {
+  box-shadow: 0px 2.5px 0px rgb(228, 121, 17),
+  0px -2.5px 0px rgb(228, 121, 17);
+  outline: 0;
+}
+
+#search-bar:focus ~ #search-icon-container {
+  box-shadow: 0px 2.5px 0px rgb(228, 121, 17), /*up*/
+  0px -2.5px 0px rgb(228, 121, 17), /*down*/
+  2.5px -2.5px 0px rgb(228, 121, 17), /*right-up*/
+  2.5px 2.5px 0px rgb(228, 121, 17); /*right-down*/
+}
+#search-bar:focus ~ #select {
+  box-shadow: -2px 2.5px 0px rgb(228, 121, 17), /*up*/ 
+    -2px -2.5px 0px rgb(228, 121, 17), /*down*/
+    2px -2px 0px rgb(228, 121, 17), /*left-down*/
+    2px 2px 0px rgb(228, 121, 17); /*left-up*/
+}
+
+header .nav-top .nav-fill #search-icon-container {
+  border-radius: 0px 4px 4px 0px;
+  background-color: #febd69;
+  height: 41px;
+  width: 45px;
+  border: none;
+  order: 2;
+}
+header .nav-top .nav-fill #search-icon-container #search-icon{
+  color: #333;
+  cursor: pointer;
+}
+/* --------------------- nav-right ----------------------------*/
+header .nav-top .nav-right{
+  max-width: 330px;
+  min-width: 270px;
+}
+
+header .nav-top .nav-right .account-orders-cart {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+header .nav-top .nav-right .account-orders-cart >*{ 
+  height: 50px;
+  margin: 0px 3px;
+}
+
+header .nav-top .nav-right .account-orders-cart .account-wrapper {
+  display: flex;
+  min-width: 130px;
+  max-width: 130px;
+  margin: 0px 0px 0px 6px;
+  padding: 0px 9px 10px 7px;
+}
+header .nav-top .nav-right .account-orders-cart .orders-wrapper {
+  display: flex;
+  min-width: 85px;
+  max-width: 85px;
+  padding: 10px 9px 10px 10px;
+}
+header .nav-top .nav-right .account-orders-cart .cart-wrapper {
+  display: flex;
+  margin: 0px 15px 0px 6px;
+  padding: 0px 9px 11px 0px;
+}
+header .nav-top .nav-right .account-orders-cart .orders-wrapper .orders ,
+header .nav-top .nav-right .account-orders-cart .account-wrapper .account {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+header .nav-top .nav-right .account-orders-cart .account-wrapper .account {
+  padding-top: 10px;
+}
+header .nav-top .nav-right .account-orders-cart .account-wrapper .account .down-arrow {
+  display: flex;
+  align-items: center;
+}
+header .nav-top .nav-right .account-orders-cart .account-wrapper .account .down-arrow .arrow-icon {
+  width: 0px;
+  height: 0px;
+  border-top: 5px solid #a7acb2;
+  border-left: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 5px solid transparent;
+  margin: 25px 0px 0px 5px;
+}
+
+header .nav-top .nav-right .account-orders-cart .cart-wrapper {
+  display: flex;
+}
+header .nav-top .nav-right .account-orders-cart .cart-wrapper .cart-container {
+  position: relative;
+  width: 38px;
+  height: 50px;
+
+}
+header .nav-top .nav-right .account-orders-cart .cart-wrapper .cart-container .cart-count {
+  position: absolute;
+  top: 9px;
+  left: 18px;
+}
+header .nav-top .nav-right .account-orders-cart .cart-wrapper .cart-container .cart-icon{
+  position: absolute;
+  top: 13px;
+  background-image: url(https://images-fe.ssl-images-amazon.com/images/G/65/gno/sprites/nav-sprite-global-1x-hm-dsk-reorg._CB405931427_.png);
+  background-position: -10px -340px;
+  width: 38px;
+  height: 26px;
+}
+
+header .nav-top .nav-right .account-orders-cart .cart-wrapper .cart-text-container {
+  display: flex;
+  align-items:flex-end;
+}
+
+/* ================================================= */
+/* ------------------------- top bottom ----------------------------------- */
+/* ================================================= */
+
+/*--------------- nav-left -----------------*/
+header .nav-bottom .nav-left #myLinks {
+  display: none;
+}
+
+header .nav-bottom .nav-left {
+  display: flex;
+  align-items: center;
+  padding: 0px 5px;
+}
+header .nav-bottom .nav-left .icon {
+  padding: 3px 10px;
+}
+
+/*--------------- nav-fill -----------------*/
+header .nav-bottom .nav-fill {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+header .nav-bottom .nav-fill ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+header .nav-bottom .nav-fill ul li {
+  padding: 3px 15px;
+}
+/*--------------- nav-right -----------------*/
+
+
+
+/* Media Query */
+
+@media only screen and (max-width: 1100px) {
+ header .nav-bottom .nav-fill ul #item-6,
+ header .nav-bottom .nav-fill ul #item-7,
+ header .nav-bottom .nav-fill ul #item-8,
+ header .nav-bottom .nav-fill ul #item-9,
+ header .nav-bottom .nav-fill ul #item-10,
+ header .nav-bottom .nav-fill ul #item-11,
+ header .nav-bottom .nav-fill ul #item-12,
+ header .nav-bottom .nav-fill ul #item-13 {
+   display: none;
+ }
+}

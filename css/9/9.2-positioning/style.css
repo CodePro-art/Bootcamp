@@ -1,0 +1,30 @@
+#outer {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: darkcyan;
+  margin: 50px;
+  }
+
+#inner {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: lightgreen;
+  top: 10px;
+ }
+
+ .small{
+  font-size: 10px;
+ }
+
+ .medium{
+  font-size: 15px;
+ }
+
+ .large{
+  font-size: 20px;
+ }
+
+
+ 

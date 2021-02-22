@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header">
+  <h2>Scroll Down</h2>
+  <p>Scroll down to see the sticky effect!</p>
+</div>
+
+<div id="navbar">  
+  <button>Home</button>
+  <button>News</button>
+  <button>Contact</button>
+  <button>Sign-Up</button>
+</div>
+
+<div class="content">
+  <h3>Sticky Navigation Effect! Please enjoy!</h3>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, quo dignissimos, modi aperiam tempora culpa, ullam odio ea corporis nostrum explicabo similique architecto omnis rerum voluptas fugiat magni libero dicta sit deserunt. Sit iste eligendi id totam at, dolor corporis, laborum nesciunt earum officiis, odio veniam eos officia voluptates molestias.</p>
+  <p>Assumenda debitis ab ea voluptatem, natus dolorem? Adipisci est unde quae, architecto doloremque deserunt blanditiis omnis magni vel placeat praesentium laborum aspernatur. Reiciendis molestias ea ad assumenda magni fuga, deserunt eveniet consequatur. Quis veniam corporis consequatur qui aliquid quae nostrum illum in ratione? Sed odio recusandae eveniet aut, voluptatum fugit.</p>
+  <p>Impedit dolore veniam quas iste, enim minima repellendus. Dolorem asperiores porro ad rem libero exercitationem, dignissimos ipsum? Recusandae ducimus porro saepe necessitatibus ipsum nulla eaque. Officiis voluptate unde iste architecto error fugit cumque totam, eaque in quisquam, voluptatum sequi laudantium tenetur. Ad, non dicta aut corrupti consequatur accusamus quasi illo?</p>
+  <p>Qui illo delectus nesciunt beatae porro aspernatur explicabo alias nemo, optio esse cum? Incidunt enim aspernatur quae ex repellat esse sed eaque quod corrupti autem, id tenetur veniam, obcaecati delectus dolores quo perspiciatis dicta modi voluptate alias nisi et voluptatibus. Voluptate optio culpa odit provident ducimus error minus molestias ab?</p>
+  <p>Temporibus facere similique necessitatibus praesentium sequi id in laborum, velit quos ducimus incidunt, distinctio nam rerum quibusdam aliquam vel! Quos a perspiciatis vero adipisci aliquid qui fugiat deleniti porro magni odit quam praesentium, ut, perferendis fugit, eius numquam cum expedita? Ad voluptates explicabo recusandae aperiam tempora excepturi, aliquam numquam quia.</p>
+  <p>Officiis reprehenderit ipsa enim? Dicta ratione, aut assumenda repellendus excepturi iure eaque quidem quae vero, dolorum deleniti labore eligendi magnam repudiandae ad ea voluptates. Tempora dicta, dolor reprehenderit laudantium dolore itaque saepe quia consectetur provident cum placeat excepturi, mollitia eos aspernatur ipsam quos accusamus adipisci nisi odio minus possimus corrupti.</p>
+  <p>Quaerat excepturi perferendis repudiandae! Provident cum laboriosam odit, aliquid laborum veritatis suscipit iure, asperiores architecto blanditiis facilis eius et veniam at, consequuntur dolor aperiam tenetur eos velit quis earum quam optio nam! Minima sed culpa neque accusamus officia, pariatur beatae impedit mollitia accusantium quam praesentium facere et quaerat maiores voluptate!</p>
+  <p>Nulla iure culpa numquam. Mollitia assumenda, ratione vitae aspernatur tempora nesciunt libero voluptatum soluta officiis in maxime atque, quasi eius quis animi dolore aliquam similique! Nulla velit illum modi numquam architecto eius, distinctio dolorum magni. Exercitationem, repellendus eos id ipsum asperiores nisi fugiat omnis dolorum deleniti obcaecati quis, perferendis ut.</p>
+  <p>Aut error quaerat fugiat, doloremque, excepturi dolores adipisci nam ipsam voluptatem pariatur magnam harum quisquam quos ab ducimus atque asperiores esse, quasi sed eum modi autem? Unde quam perferendis maxime porro dolorem reiciendis ex in cupiditate doloremque minima atque quidem nesciunt consequuntur inventore impedit non ipsum, tempora esse? Repellendus, sed.</p>
+  <p>Est mollitia officia ipsam eveniet nesciunt quaerat omnis sit perspiciatis quidem hic quisquam doloremque, molestiae odit similique maxime neque quam officiis reiciendis nemo libero ut doloribus excepturi. Nobis porro doloribus magni blanditiis alias? Consequatur laudantium ipsa quas possimus vitae accusamus eos sapiente distinctio doloribus, ipsam voluptatibus cumque sint facere blanditiis!</p>
+</div>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+/* MIAIN: carousel section */
+main #carousel{
+  height: 411px;
+}
+
+/* product-details section */
+main #product-details {
+  height: 240px;
+}
+
+/* product-description section */
+main #product-description {
+  height: 460px;
+}

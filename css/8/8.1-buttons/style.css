@@ -1,0 +1,112 @@
+body{
+  font-family: Arial, Helvetica, Arial, sans-serif;
+  text-align: center;
+  font-size: 25px;
+  color: azure;
+  background-color:#484860;
+}
+
+#round{
+  border-radius: 30px;
+}
+
+/* full */
+#flat.full.green{
+  background-color: green;
+  border: 3px solid green;
+}
+#flat.full.red{
+  background-color: red;
+  border: 3px solid red;
+}
+#flat.full.blue{
+  background-color: blue;
+  border: 3px solid blue;
+}
+#round.full.orange{
+  background-color: orange;
+  border: 3px solid orange;
+}
+#round.full.yellow{
+  background-color: rgb(238, 238, 44);
+  border: 3px solid rgb(238, 238, 44);
+}
+#round.full.gray{
+  background-color: gray;
+  border: 3px solid gray;
+}
+
+/* ghost */
+#flat.ghost.green{
+  background-color: #484860;
+  border: 3px solid green;
+}
+#flat.ghost.red{
+  background-color:#484860;
+  border: 3px solid red;
+}
+#flat.ghost.blue{
+  background-color: #484860;
+  border: 3px solid blue;
+}
+#round.ghost.orange{
+  background-color: #484860;
+  border: 3px solid orange;
+}
+#round.ghost.yellow{
+  background-color:#484860;
+  border: 3px solid rgb(238, 238, 44);
+}
+#round.ghost.gray{
+  background-color: #484860;
+  border: 3px solid gray;
+}
+
+/* hover */
+.green:hover {
+  background-color: rgb(0, 95, 0)!important;
+  color: white;
+}
+.red:hover {
+  background-color: rgb(180, 0, 0)!important;
+  color: white;
+}
+.blue:hover {
+  background-color:rgb(0, 0, 180)!important;
+  color: white;
+}
+.orange:hover {
+  background-color: rgb(199, 129, 0)!important;
+  color: white;
+}
+.yellow:hover {
+  background-color: rgb(207, 207, 0)!important;
+  color: white;
+}
+.gray:hover {
+  background-color:rgb(100, 100, 100)!important;
+  color: white;
+}
+
+.large{
+  font-size: 24px;
+}
+
+.medium{
+  font-size: 16px;
+}
+
+.small{
+  font-size: 12px;
+}
+
+.btn{
+  font-weight: bold;
+  color: white;
+  padding: 13px 50px;
+  text-align: center;
+  display: inline-block;
+  margin: 15px 20px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}

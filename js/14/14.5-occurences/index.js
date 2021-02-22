@@ -1,0 +1,13 @@
+function countOccurrences (str, char){
+  let counter = 0 ;
+  for ( let i = 0 ; i < str .length; i ++ )
+    if ( str . charAt ( i ) === char )
+      counter ++ ;
+  return counter ;
+}
+console.log(countOccurrences ( "ini mini miny moe" , "n" ));
+
+
+// 1. counter +1 -> counter++
+// 2. found it through debuggingstep by step
+// 3. assignment nedded the equal sign: counter +=1;

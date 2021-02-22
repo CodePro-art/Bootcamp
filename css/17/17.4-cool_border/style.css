@@ -1,0 +1,43 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.box{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  height: 20vh;
+  width: 20vw;
+  background-color: black;
+}
+
+.cool{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2vh 2vw;
+  border: 3px solid red;
+}
+
+.cool::before{
+  content:"";
+  align-self: center;
+  position: absolute;
+  height: 40%;
+  width: 100%;
+  border: 3px solid black;
+}
+
+.cool::after{
+  content:"";
+  align-self: center;
+  position: absolute;
+  height: 100%;
+  width: 66%;
+  border: 3px solid black;
+}
+

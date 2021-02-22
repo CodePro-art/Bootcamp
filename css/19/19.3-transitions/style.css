@@ -1,0 +1,117 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  position: relative;
+  margin-top: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn{
+  background-color: transparent;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 200px;
+  height: 50px;
+  margin: 20px;
+  border: 2px solid black;
+  z-index: 10;
+}
+
+.trans{
+  transition: color 1s ease-in-out;
+}
+/* --------------- Define after elements ---------------- */
+.rotate::after{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: yellow;
+  transform-origin: 0% 0% ;
+  transform: rotate(-90deg);
+  top: 0;
+  left: 0;
+  transition: 0.5s ease-in-out;
+  z-index: -10;
+}
+
+.trans::after{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  top: 0;
+  left: -200px;
+  transition: 1s ease-in-out;
+  z-index: -10;
+}
+
+.transy::after{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  content: 'YEAH!';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: red;
+  top: -50px;
+  left: 0;
+  transition: 0.5s ease-in-out;
+  z-index: 20;
+}
+
+.scale::after{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  content: 'Scale & Opacity';
+  position: absolute;
+  color: white;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transform: scale(3,3);
+  transition: 1s ease-in-out;
+  z-index: 20;
+}
+
+/* ---------------- Upon hover ----------------*/
+.rotate:hover::after{
+  top: 0;
+  left: 0;
+  transform: rotate(0deg);
+}
+.trans:hover::after{
+  top: 0;
+  left: 0;
+}
+.transy:hover::after{
+  top: 0;
+  left: 0;
+}
+.scale:hover::after{
+  background-color: black;
+  color: white;
+  opacity: 1;
+  transform: scale(1,1);
+}
+.trans:hover{
+  color: white;
+}

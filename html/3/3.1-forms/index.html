@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <!-- Basic heading 2 -->
+  <h2>Create an account</h2>
+
+  <!-- Declare form -->
+  <form action="/action_page.php">
+
+    <!-- Email field-->
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email"><br><br>
+
+    <!-- Password field -->
+    <label for="pwd">Password:</label><br>
+    <input type="password" id="pwd" name="pwd" minlength="8"><br><br>
+
+    <!-- Age field -->
+    <label for="birthday">Birthday:</label>
+    <input type="date" id="birthday" name="birthday"><br><br>
+
+    <!-- Free text field -->
+    <label for="email">Tell us a little about yourself:<br></label>
+    <textarea id="myTextArea" rows="3" cols="80"></textarea><br><br>
+
+    <!-- Agree to terms checkbox + link to terms of service -->
+    <label><input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">I agree to the <a href="#" style="color:dodgerblue">Terms of service</a>.</label><br><br>
+
+    <!-- Sign up button -->
+    <input type="submit" value="Sign Up">
+  </form>
+
+</body>
+
+</html>

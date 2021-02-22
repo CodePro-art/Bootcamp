@@ -1,0 +1,19 @@
+a::after{
+  content: " (" attr(href) ") ";
+}
+
+.box{
+  height: 200px;
+  width: 200px;
+  background-color: blue;
+  position: relative;
+}
+
+.box::after{
+  content:"";
+  height: 200px;
+  width: 100px;
+  background-color: teal;
+  position: absolute;
+  left:100px;
+} 

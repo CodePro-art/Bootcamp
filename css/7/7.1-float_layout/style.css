@@ -1,0 +1,39 @@
+.container{
+  max-width: 50%;
+  margin: 10px auto;
+}
+
+#header{
+  width:90%;
+  height:50px;
+  background-color: goldenrod;
+}
+
+#side{
+  float:left;
+  width:15%;
+  min-height: 400px;
+  background-color: olivedrab;
+}
+
+#main{
+  float:left;
+  width:calc(75% - 26px);
+  min-height: 400px;
+  background-color: plum;
+}
+
+#footer{
+  clear:both;
+  height: 50px;
+  width: 90%;
+  background-color: turquoise;
+}
+
+.block{
+  margin: 5px;
+  padding: 5px;
+  padding: 5px;
+  text-align: center;
+  border: 3px solid black;
+}

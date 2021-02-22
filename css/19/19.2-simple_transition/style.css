@@ -1,0 +1,40 @@
+a::after{
+  content: " (" attr(href) ") ";
+}
+
+.box{
+  height: 200px;
+  width: 200px;
+  background-color: blue;
+  position: relative;
+  overflow: visible;
+}
+
+.box::after{
+  content:"";
+  height: 200px;
+  width: 200px;
+  background-color: teal;
+  position: absolute;
+  left:200px;
+}
+
+.box:hover{
+  animation-name: animate;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.box:hover::after{
+  animation-name: animate;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animate{
+  to{
+    left:0px;
+    background-color: rgb(0, 41, 128);
+    border-radius: 50%;
+  }
+}
