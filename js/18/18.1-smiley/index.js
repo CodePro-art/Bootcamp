@@ -1,7 +1,6 @@
-console.log("HI!");
+console.log("ok");
+const number = document.querySelector('.input').value;
 let submit = document.querySelector('.submit');
-let text = document.querySelector('.text');
-let message = document.querySelector('.message')
 
 function logSubmit () {
   if(text.value.length < 100)
