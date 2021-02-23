@@ -1,0 +1,34 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(22, 46, 0);
+  color: bisque;
+}
+
+body >* {
+  margin: 5px 0px;
+}
+
+form{
+  background-color:rgb(128, 255, 181);
+  padding: 0px 5px;
+}
+
+input {
+  background-color: rgb(223, 255, 223);
+  text-align: center;
+  width: 30px;
+  padding: 5px 0px;
+  margin: 10px 5px;
+}
+
+button {
+  padding: 3px 2px;
+}

@@ -49,7 +49,7 @@ web.addContent("form",0,'<div class="message"></div>');
 web.addContent("form",0,'<input class="input" type="number" min="0"></input><br><br>');
 web.addContent("form",0,'<input type="submit" value="Click here" class="submit"><br><br>');
 let element = document.createElement("span");
-web.image("https://google.com/favicon.ico");
+
 
 const str = document.querySelector('.input');
 const submit = document.querySelector('.submit');
