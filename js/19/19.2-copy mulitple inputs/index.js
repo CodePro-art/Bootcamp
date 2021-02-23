@@ -12,10 +12,11 @@ input.forEach((el,i) => el.addEventListener('keyup',()=>{
   i < len-1 ? el.nextElementSibling.focus() : btn.focus();
 }));
 
-input.forEach((el,i) => el.addEventListener('paste',(event)=>{ 
+input.forEach(el => el.addEventListener('paste',(event)=>{ 
   let paste = (event.clipboardData || window.clipboardData).getData('text');
   const char = paste.split("");
   input.forEach((e,i) => e.setAttribute("value",`${char[i]}`));
+  // setTimeout(function(){ btn.focus(); }, 50);
   btn.focus();
 })); 
 
