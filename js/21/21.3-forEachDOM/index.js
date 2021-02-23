@@ -24,7 +24,7 @@ email: "timmy.hotmail.com",
 
 
 // 1
-users.forEach((el,i)=> { ol.innerHTML += `<li>${el.firstName} ${el.lastName} </li>`;});
+users.forEach(el=> { ol.innerHTML += `<li>${el.firstName} ${el.lastName} </li>`;});
 
 // 2
 ol.setAttribute("style", "list-style-type: none;");               
