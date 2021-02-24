@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+
+:root {
+  --primary-color: rgb(135, 144, 182);
+  --primary-color-darker: rgb(64, 80, 133);
+}
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: var(--primary-color);
+  font-family: 'Open sans', sans-serif;
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+
+.container {
+  font-family: 'Akaya Telivigala', cursive;
+  max-width: 500px;
+  margin: 50px auto;
+  background: rgb(230, 240, 255);
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid rgb(106, 106, 255);
+}
+
+h1 {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.watch {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+h2 {
+  font-size: 3em;
+  font-weight: 400;
+  height: 50px;
+  width: 335px;
+}
+
+h2.paused {
+  color: rgb(255, 69, 69);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.buttons button {
+  margin: 0 5px;
+  border: none;
+  padding: 10px;
+  background-color: var(--primary-color-darker);
+  color: #FFF;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 5px;
+}
