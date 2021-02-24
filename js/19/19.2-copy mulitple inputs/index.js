@@ -26,18 +26,22 @@ function validate () {
   string === pass ? alert("Correct!") : alert("Wrong! Try again!");
 }
 
+function claer () {
+  input.forEach(e => e.setAttribute("value",""));
+}
+
 
 // check if the string contains only numbers
 // let isnum = /^\d+$/.test(paste);
 
 
 // define event listener for each input box
-// input.forEach((el,i) => el.addEventListener('keydown',(event)=>{ 
-//   if (!event.repeat)
-//     console.log(`Key "${event.key}" pressed  [event: keydown]`);
-//   else
-//     console.log(`Key "${event.key}" repeating  [event: keydown]`);
-//  }));
+input.forEach((el,i) => el.addEventListener('keydown',(event)=>{ 
+  if (!event.repeat)
+    console.log(`Key "${event.key}" pressed  [event: keydown]`);
+  else
+    console.log(`Key "${event.key}" repeating  [event: keydown]`);
+ }));
 
 
 
