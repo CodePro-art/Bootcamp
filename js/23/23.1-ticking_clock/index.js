@@ -20,14 +20,12 @@ function Clock(){
   sc.style.transform = `rotateZ(${ss}deg)`;
   
   // digital
-  //Set the AM or PM time
-  meridiem = hours >= 12 ? " PM" : " AM";
   
   //Put 0 in front of single digit minutes and seconds
   minutes = minutes<10 ? "0" + minutes : minutes;
   seconds = seconds<10 ? "0" + seconds : seconds;
 
-  document.getElementById("digital").innerHTML = (hours + ":" + minutes + ":" + seconds + meridiem);
+  document.getElementById("digital").innerHTML = (hours + ":" + minutes + ":" + seconds);
 }
 
 setInterval('Clock()', 1000);

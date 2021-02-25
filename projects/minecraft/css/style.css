@@ -1,0 +1,14 @@
+/* Reset */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*  */
+body {
+  background: url(https://wallpapercave.com/wp/wp5961273.jpg)no-repeat center center / cover;
+  width: 100vw;
+  height: 100vh;
+}
+
