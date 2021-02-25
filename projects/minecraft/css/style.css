@@ -5,8 +5,12 @@
   box-sizing: border-box;
 }
 
-/*  */
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+/* Body General  style */
 body {
+  display: flex;
   background: url(https://wallpapercave.com/wp/wp5961273.jpg)no-repeat center center / cover;
   width: 100vw;
   height: 100vh;
