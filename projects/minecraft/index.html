@@ -5,16 +5,62 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="shortcut icon" href="#">
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/5a1dafc887.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/menu.css">
   <title>Minecraft 2D</title>
   
 </head>
 <body>
-  <img class="logo" src="https://cdn.worldvectorlogo.com/logos/minecraft.svg" alt="Minecraft Logo" width="500" height="300">
-  <button class="btn"></button>
-  <button class="btn"></button>
-  <button class="btn"></button>
+  <div class="wrapper" id="wrapper-1">
+    <header>
+      <img src="https://cdn.worldvectorlogo.com/logos/minecraft.svg" alt="Minecraft Logo" width="600" height="100">
+      <br><h2>Mine, Craft, Build!</h2><br>
+      <h4>Click arrows or use arrow keys</h4>
+    </header>
+    
+    <audio id="player" src="./audio/bensound-adventure.mp3"></audio>
+    <div class="container">
+      <div class="volume">
+        <button class="fa fa-caret-up fa-2x" onclick="document.getElementById('player').volume += 0.1" aria-hidden="true"></button>
+        <input type="checkbox" class="checkbox">
+        
+        <button class="fa fa-caret-down fa-2x" onclick="document.getElementById('player').volume -= 0.1" aria-hidden="true"></button>
+      </div>
+      <div class="hex-row-wrapper">
+        <a href="#wrapper-2" class="hexagon one" data-type="games"><i class="fa fa-gamepad fa-3" id="hex"></i></a>
+        <a href="#" class="hexagon two" data-type="desktop"><i class="fa fa-television" id="hex"></i></a>
+        <a href="#" class="hexagon three" data-type="controls"><i class="fa fa-keyboard-o" id="hex"></i></a>
+        <a href="#" class="hexagon four" data-type="profile"><i class="fa fa-user" id="hex"></i></a>
+        <a href="#" class="hexagon five selected" data-type="search"><i class="fa fa-globe" id="hex"></i></a>
+        <botton class="hexagon six" data-type="music" ><i class="fa fa-music" id="hex"></i></botton>
+      </div>
+      <div class="active">
+        <div class="arrow-left"></div>
+        <div class="arrow-right"></div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="wrapper" id="wrapper-2" style="display: none;">
+    <section class="menu-buttons">
+      <a href="#" class="back"><i class="fas fa-chevron-circle-up fa-3x"></i></a>
+      <div>
+        <button class="fas fa-plus" onclick="document.getElementById('player').volume += 0.1" aria-hidden="true"></button>
+        <button class="pause start"><i class="fas fa-pause" style="display: none;"></i></i><i class="fas fa-play"></i></button>
+        <button class="fas fa-minus" onclick="document.getElementById('player').volume -= 0.1" aria-hidden="true"></button>
+      </div>
+    </section>
+    <section class="game-screen">
+      
+    </section>
+  </div>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="./js/index.js"></script>
+  <script src="./js/menu.js"></script>
 </body>
 </html>

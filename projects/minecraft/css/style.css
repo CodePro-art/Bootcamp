@@ -4,15 +4,55 @@
   margin: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 
-/* fonts */
-@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
-
-/* Body General  style */
+/* Body style */
 body {
-  display: flex;
-  background: url(https://wallpapercave.com/wp/wp5961273.jpg)no-repeat center center / cover;
+  /* overflow:hidden; */
+  overflow-x: hidden;
+  font-family: 'DotGothic16', sans-serif;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  
+  /* https: //wallpapercave.com/wp/wp2673437.jpg */
+  /* https: //wallpapercave.com/wp/wp2998843.jpg */
+  /* https: //wallpapercave.com/wp/wp2652291.jpg */
+  /* https: //wallpapercave.com/wp/wp138731.jpg */
+  /* https: //wallpapertag.com/wallpaper/full/6/d/1/419994-full-size-hd-minecraft-backgrounds-3200x1800-for-htc.jpg */
+
+  color: white;
+  letter-spacing: 1.5px;
   width: 100vw;
   height: 100vh;
 }
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+#wrapper-1 {
+  background: url(https://wallpapercave.com/wp/wp5961273.jpg)no-repeat center center / cover;
+}
+#wrapper-2 {
+  flex-direction: row;
+  align-items: stretch;
+  background: url(https://wallpapercave.com/wp/wp2652317.jpg)no-repeat center center / cover;
+}
+
+.menu-buttons{
+  flex-direction: row;
+  background-color: rgba(172, 172, 172,.5);
+}
+
 
