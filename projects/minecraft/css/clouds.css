@@ -1,0 +1,35 @@
+.cloud {
+  position: absolute;
+  -webkit-animation: cloudDrift linear infinite;
+  animation: cloudDrift linear infinite;
+}
+
+.lrg, .larg, .large {
+  -webkit-animation-duration: 100s;
+  animation-duration: 100s;
+}
+.sml, .smal, .small {
+  -webkit-animation-duration: 60s;
+  animation-duration: 60s;
+}
+.med, .medi, .mediu {
+  -webkit-animation-duration: 80s;
+  animation-duration: 80s;
+}
+.lrg {  top: 40px;  left: -140px;}
+.larg {  top: 50vh;  left: -200px;}
+.large {  top: 30vh;  left: 0px;}
+.sml {  top: 10px;  left: -80px;}
+.smal {  top: 60vh;  left: -250px;}
+.small {  top: 80vh;  left: -550px;}
+.med {  top: 80px;  left: -110px;}
+.medi {  top: 40vh;  left: -300px;}
+.mediu {  top: 60vh;  left: -0px;}
+
+/* Keyframe animations */
+
+@keyframes cloudDrift {
+  from {transform: translateX(0px);}
+  to { transform: translateX(150vh); }
+}
+

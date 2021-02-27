@@ -11,6 +11,7 @@
   <script src="https://kit.fontawesome.com/5a1dafc887.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/menu.css">
+  <link rel="stylesheet" href="./css/clouds.css">
   <title>Minecraft 2D</title>
   
 </head>
@@ -46,13 +47,99 @@
     </div>
   </div>
   <div class="wrapper" id="wrapper-2" style="display: none;">
+    <img class="cloud sml" src="http://www.dwuser.com/education/content/creating-keyframe-animations-with-css3/images/cloud_sml.png" width="70" height="36" />
+    <img class="cloud med" src="http://www.dwuser.com/education/content/creating-keyframe-animations-with-css3/images/cloud_med.png" width="100" height="52" />
+    <img class="cloud lrg" src="http://www.dwuser.com/education/content/creating-keyframe-animations-with-css3/images/cloud_lrg.png" width="130" height="67" />
+    <img class="cloud smal" src="http://www.dwuser.com/education/content/creating-keyframe-animations-with-css3/images/cloud_sml.png" width="84" height="44" />
+    <img class="cloud medi" src="http://www.dwuser.com/education/content/creating-keyframe-animations-with-css3/images/cloud_med.png" width="120" height="62.4" />
+    <img class="cloud larg" src="http://www.dwuser.com/education/content/creating-keyframe-animations-with-css3/images/cloud_lrg.png" width="195" height="100" />
+    <img class="cloud small" src="http://www.dwuser.com/education/content/creating-keyframe-animations-with-css3/images/cloud_sml.png" width="91" height="47" />
+    <img class="cloud mediu" src="http://www.dwuser.com/education/content/creating-keyframe-animations-with-css3/images/cloud_med.png" width="110" height="57.2" />
+    <img class="cloud large" src="http://www.dwuser.com/education/content/creating-keyframe-animations-with-css3/images/cloud_lrg.png" width="169" height="87" />
     <section class="menu-buttons">
-      <a href="#" class="back"><i class="fas fa-chevron-circle-up fa-3x"></i></a>
-      <div>
+      <div class="back-container">
+        <a href="#" class="back"><i class="fas fa-chevron-circle-up fa-3x"></i></a>
+      </div>
+      <div class="music">
         <button class="fas fa-plus" onclick="document.getElementById('player').volume += 0.1" aria-hidden="true"></button>
         <button class="pause start"><i class="fas fa-pause" style="display: none;"></i></i><i class="fas fa-play"></i></button>
         <button class="fas fa-minus" onclick="document.getElementById('player').volume -= 0.1" aria-hidden="true"></button>
       </div>
+      <div class="tools">
+        <p class="title">Tools</p>
+        <div class="tool-container">
+          <button class="axe"></button>
+          <p>Axe</p>
+        </div>
+        <div class="tool-container">
+          <button class="pickaxe"></button>
+          <p>PickAxe</p>
+        </div>
+        <div class="tool-container">
+          <button class="shovel"></button>
+          <p>Shovel</p>
+        </div>
+        <div class="tool-container">
+          <button class="hoe"></button>
+          <p>Hoe</p>
+        </div>
+      </div>
+      <div class="inventory">
+        <p class="title">Inventory</p>
+        <div class="item-container">
+          <button class="inv inv-dirt">0</button>
+          <p>dirt</p>
+        </div>
+        <div class="item-container">
+          <button class="inv inv-brick">0</button>
+          <p>brick</p>
+        </div>
+        <div class="item-container">
+          <button class="inv inv-coal">0</button>
+          <p>coal</p>
+        </div>
+        <div class="item-container">
+          <button class="inv inv-ice">0</button>
+          <p>ice</p>
+        </div>
+        <div class="item-container">
+          <button class="inv inv-gold">0</button>
+          <p>gold</p>
+        </div>
+        <div class="item-container">
+          <button class="inv inv-grass">0</button>
+          <p>grass</p>
+        </div>
+        <div class="item-container">
+          <button class="inv inv-diamond">0</button>
+          <p>diamond</p>
+        </div>
+        <div class="item-container">
+          <button class="inv inv-glass">0</button>
+          <p>glass</p>
+        </div>
+        <div class="item-container">
+          <button class="inv inv-sand">0</button>
+          <p>sand</p>
+        </div>
+        <div class="item-container">
+          <button class="inv inv-snow">0</button>
+          <p>snow</p>
+        </div>
+        <div class="item-container">
+          <button class="inv inv-stone">0</button>
+          <p>stone</p>
+        </div>
+        <div class="item-container">
+          <button class="inv inv-wood">0</button>
+          <p>wood</p>
+        </div>
+
+      </div>
+      <div class="reset-container">
+        <button class="fa fa-refresh fa-lg"></button>
+      </div>
+     
     </section>
     <section class="game-screen">
       

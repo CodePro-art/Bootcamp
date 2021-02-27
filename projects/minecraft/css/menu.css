@@ -179,6 +179,7 @@ i.fa {
   width: 50px;
   cursor: pointer;
 }
+.fa-refresh:hover,
 .fa-plus:hover,
 .fa-minus:hover,
 .pause:hover,
@@ -214,13 +215,6 @@ i.fa {
   0 1px white,
   1px 0 white,
   0 -1px white;
-}
-
-.back {
-  margin: 0px 18%;
-  transition: .3s;
-  color: #fff;
-  opacity: 0.6;
 }
 
 .pause, .start, .fa-plus, .fa-minus {
