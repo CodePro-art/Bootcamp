@@ -46,16 +46,37 @@
       
     </div>
   </div>
+
   <div class="wrapper" id="wrapper-2" style="display: none;">
-    <img class="cloud sml" src="http://www.dwuser.com/education/content/creating-keyframe-animations-with-css3/images/cloud_sml.png" width="70" height="36" />
-    <img class="cloud med" src="http://www.dwuser.com/education/content/creating-keyframe-animations-with-css3/images/cloud_med.png" width="100" height="52" />
-    <img class="cloud lrg" src="http://www.dwuser.com/education/content/creating-keyframe-animations-with-css3/images/cloud_lrg.png" width="130" height="67" />
-    <img class="cloud smal" src="http://www.dwuser.com/education/content/creating-keyframe-animations-with-css3/images/cloud_sml.png" width="84" height="44" />
-    <img class="cloud medi" src="http://www.dwuser.com/education/content/creating-keyframe-animations-with-css3/images/cloud_med.png" width="120" height="62.4" />
-    <img class="cloud larg" src="http://www.dwuser.com/education/content/creating-keyframe-animations-with-css3/images/cloud_lrg.png" width="195" height="100" />
-    <img class="cloud small" src="http://www.dwuser.com/education/content/creating-keyframe-animations-with-css3/images/cloud_sml.png" width="91" height="47" />
-    <img class="cloud mediu" src="http://www.dwuser.com/education/content/creating-keyframe-animations-with-css3/images/cloud_med.png" width="110" height="57.2" />
-    <img class="cloud large" src="http://www.dwuser.com/education/content/creating-keyframe-animations-with-css3/images/cloud_lrg.png" width="169" height="87" />
+    <div class="cloude-container">
+      <img class="cloud sml"
+        src="http://www.dwuser.com/education/content/creating-keyframe-animations-with-css3/images/cloud_sml.png" width="70"
+        height="36" />
+      <img class="cloud med"
+        src="http://www.dwuser.com/education/content/creating-keyframe-animations-with-css3/images/cloud_med.png" width="100"
+        height="52" />
+      <img class="cloud lrg"
+        src="http://www.dwuser.com/education/content/creating-keyframe-animations-with-css3/images/cloud_lrg.png" width="130"
+        height="67" />
+      <img class="cloud smal"
+        src="http://www.dwuser.com/education/content/creating-keyframe-animations-with-css3/images/cloud_sml.png" width="84"
+        height="44" />
+      <img class="cloud medi"
+        src="http://www.dwuser.com/education/content/creating-keyframe-animations-with-css3/images/cloud_med.png" width="120"
+        height="62.4" />
+      <img class="cloud larg"
+        src="http://www.dwuser.com/education/content/creating-keyframe-animations-with-css3/images/cloud_lrg.png" width="195"
+        height="100" />
+      <img class="cloud small"
+        src="http://www.dwuser.com/education/content/creating-keyframe-animations-with-css3/images/cloud_sml.png" width="91"
+        height="47" />
+      <img class="cloud mediu"
+        src="http://www.dwuser.com/education/content/creating-keyframe-animations-with-css3/images/cloud_med.png" width="110"
+        height="57.2" />
+      <img class="cloud large"
+        src="http://www.dwuser.com/education/content/creating-keyframe-animations-with-css3/images/cloud_lrg.png" width="169"
+        height="87" />
+    </div>
     <section class="menu-buttons">
       <div class="back-container">
         <a href="#" class="back"><i class="fas fa-chevron-circle-up fa-3x"></i></a>
@@ -68,19 +89,19 @@
       <div class="tools">
         <p class="title">Tools</p>
         <div class="tool-container">
-          <button class="axe"></button>
+          <button class="tool axe"></button>
           <p>Axe</p>
         </div>
         <div class="tool-container">
-          <button class="pickaxe"></button>
+          <button class="tool pickaxe"></button>
           <p>PickAxe</p>
         </div>
         <div class="tool-container">
-          <button class="shovel"></button>
+          <button class="tool shovel"></button>
           <p>Shovel</p>
         </div>
         <div class="tool-container">
-          <button class="hoe"></button>
+          <button class="tool hoe"></button>
           <p>Hoe</p>
         </div>
       </div>
@@ -137,7 +158,7 @@
 
       </div>
       <div class="reset-container">
-        <button class="fa fa-refresh fa-lg"></button>
+        <button id="rst-btn" class="fa fa-refresh fa-lg" onclick="reset()"></button>
       </div>
      
     </section>

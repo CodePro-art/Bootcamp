@@ -1,7 +1,12 @@
+.cloud-container{
+  position: relative;
+}
+
 .cloud {
   position: absolute;
   -webkit-animation: cloudDrift linear infinite;
   animation: cloudDrift linear infinite;
+  z-index: 90;
 }
 
 .lrg, .larg, .large {
@@ -16,20 +21,20 @@
   -webkit-animation-duration: 80s;
   animation-duration: 80s;
 }
-.lrg {  top: 40px;  left: -140px;}
-.larg {  top: 50vh;  left: -200px;}
-.large {  top: 30vh;  left: 0px;}
-.sml {  top: 10px;  left: -80px;}
-.smal {  top: 60vh;  left: -250px;}
-.small {  top: 80vh;  left: -550px;}
-.med {  top: 80px;  left: -110px;}
-.medi {  top: 40vh;  left: -300px;}
-.mediu {  top: 60vh;  left: -0px;}
+.lrg {  top: 10vh;  left: -350px;}
+.larg {  top: 20vh;  left: -700px;}
+.large {  top: 30vh;  left: -550px;}
+.sml {  top: 40px;  left: -1000px;}
+.smal {  top: 35vh;  left: -1500px;}
+.small {  top: 25vh;  left: -600px;}
+.med {  top: 15px;  left: -1100px;}
+.medi {  top: 50vh;  left: 0px;}
+.mediu {  top: 45vh;  left: -2000px;}
 
 /* Keyframe animations */
 
 @keyframes cloudDrift {
   from {transform: translateX(0px);}
-  to { transform: translateX(150vh); }
+  to { transform: translateX(200vh); }
 }
 

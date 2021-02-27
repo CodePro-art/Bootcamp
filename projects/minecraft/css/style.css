@@ -25,6 +25,8 @@ body {
   letter-spacing: 1.5px;
   width: 100vw;
   height: 100vh;
+  /* cursor: url(../img/shovel.png),
+  auto; */
 }
 
 header {
@@ -49,28 +51,23 @@ header {
   align-items: stretch;
   position: relative;
   overflow: hidden;
-  /* Solid fallback for old browsers */
-  background: #0099ff;
-  /* Firefox */
-  background: -moz-linear-gradient(top, #0099ff, #00ccff);
-  /* WebKit - Chrome and Safari */
-  background: -webkit-linear-gradient(top, #0099ff, #00ccff);
-  /* Internet Explorer 10 */
-  background: -ms-linear-gradient(top, #0099ff, #00ccff);
-  /* Opera */
-  background: -o-linear-gradient(top, #0099ff, #00ccff);
-  /* general syntax */
-  background: linear-gradient(top, #0099ff, #00ccff);
+  -webkit-animation: sky 5s infinite;
+  animation: sky 160s infinite;
+}
+@keyframes sky {
+  0%, 100% {  background-color: #0099ff; }
+  55% { background-color: #000033; }
 }
 
 .menu-buttons{
   display: flex;
-  min-width: 110px;
+  min-width: 120px;
   flex-direction: column;
   justify-content: space-between;
   background-color: #333;
-  z-index: 100;
+  z-index: 130;
 }
+
 .menu-buttons >*{
   flex: 1;
   border-radius: 1px;
@@ -95,7 +92,20 @@ header {
   flex-direction: column;
   align-items: flex-start;
 }
+.inv:hover{
+  text-shadow: -1px 0 white,
+  0 1px white,
+  1px 0 white,
+  0 -1px white;
+  border: none;
+  animation: pop 0.3s linear 1;
+}
 
+@keyframes pop {
+  50% {
+    transform: scale(1.2);
+  }
+}
 .inv-dirt{  background: url(../img/inv-dirt.png) no-repeat center center / cover;}
 .inv-brick{  background: url(../img/inv-brick.png) no-repeat center center / cover;}
 .inv-coal{  background: url(../img/inv-coal.png) no-repeat center center / cover;}
@@ -136,9 +146,36 @@ header {
   border: none;
   background-color: transparent;
   cursor: pointer;
+  outline: none;
 }
-.tool-container button:hover,
-.item-container button:hover{  background-color: #999;}
+
+.rst {
+  -webkit-animation: spin 0.2s ease-in-out;
+  -moz-animation: spin 0.2s ease-in-out;
+  animation: spin 0.2s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.tool-container button:hover{  background-color: #999;}
 
 .title{
   width: 100%;
@@ -153,12 +190,16 @@ header {
 .reset{
   color: #fff;
 }
+
+/* screen game */
 .game-screen {
+  position: relative;
   width: 100%;
   display: flex;
   list-style: none;
   flex-wrap: wrap;
   z-index: 100;
+ 
 }
 
 /* default box = sky */
@@ -168,16 +209,16 @@ header {
   border: none;
   width: 4%;
   height: 5%;
-  z-index: 100;
 }
 
 .box:hover{
   box-shadow: 0 0 5px #fff;
+  border-radius: 3px;
+  border: 1px solid white;
 }
 
 .box:focus {
-  box-shadow: 0 0 5px #333;
-  background-color: thistle;
+  outline: none;
 }
 
 /* special tiles */
@@ -190,3 +231,4 @@ header {
 .ice{  background: url(../img/ice.jpg) no-repeat center center / cover;}
 .leaves{  background: url(../img/leaves.jpg) no-repeat center center / cover;}
 .grass{  background: url(../img/grass.jpg) no-repeat top center / cover;}
+.bush{  background: url(../img/bush.jpg) no-repeat top center / cover;}
