@@ -15,7 +15,8 @@ class Minecraft {
     this.width = width;
     this.trees = trees;
     this.bushes = bushes;
-    this.selectedTool =[];
+    this.selectedTool ="";
+    this.selectedItem ="";
     this.inventoryCounter ={
       dirt: 0,
       brick: 0,
@@ -48,7 +49,7 @@ class Minecraft {
             box.classList.add('bush');
         if((i == grass-1 && (j === 20 || j===21)))
             box.classList.add('stone');
-        if(i>=grass && i<ground )
+        if(i === grass )
           box.classList.add('grass');
         if(i>=ground && i<lava){
           (j%17) || (i !== ground+3) ? box.classList.add('ground') : box.classList.add('gold');
@@ -64,8 +65,6 @@ class Minecraft {
       }
     }
   }
-
-  tools(){}
  
   generateRandom(bush,tree){
     const maxBushes = Math.floor(cols/3);
@@ -90,6 +89,27 @@ class Minecraft {
 let game = new Minecraft(1);
 game.initialize();
 
+// clense cursor
+document.body.addEventListener("keydown", function(e){
+  var keycode = e.charCode || e.keyCode;
+  switch ( keycode ) {
+    default: 
+      break;
+    case 27:
+      clearCursor();
+      break; 
+  }
+})
+
+// function to clear cursor to default
+function clearCursor(){
+  tiles.forEach((box)=>{
+    box.classList.remove('cursor-shovel');
+    box.classList.remove('cursor-pickaxe');
+    box.classList.remove('cursor-axe');
+    box.classList.remove('cursor-hoe');
+  });
+}
 // reset
 function reset(){
   document.getElementById('rst-btn').classList.add('rst');
@@ -140,12 +160,10 @@ tool.forEach((e)=>{
         box.classList.remove('cursor-axe');
       });
     }
- 
   })
 });
 
 // tiles event
-
 tiles.forEach((box)=>{
   box.addEventListener('click',()=>{
     if(game.selectedTool === 'shovel'){
@@ -204,11 +222,12 @@ tiles.forEach((box)=>{
         box.classList.remove('ground');
         game.inventoryCounter.sand++;
       }
-      if(box.classList.contains('snad')){
+      if(box.classList.contains('sand')){
         box.classList.remove('sand');
         game.inventoryCounter.glass++;
       }
     }
+
     updateInventory();
   });
 });
@@ -220,6 +239,10 @@ function updateInventory(){
     item.innerHTML = game.inventoryCounter[item.classList[1].slice(4)];
   });
 }
+
+
+
+
 
 
 
