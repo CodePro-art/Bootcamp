@@ -4,4 +4,6 @@
 // If the parameter is itself not a perfect square then -1 should be returned. You may assume the
 // parameter is positive.
 
-const nextPerfecrSquare = (number) => (number > 0 && Math.sqrt(number) % 1 === 0) ? Math.pow((Math.sqrt(number) + 1),2) : -1 ;
+const nextPerfecrSquare = (number) => {
+  return (number > 0 && Math.sqrt(number) % 1 === 0) ? Math.pow((Math.sqrt(number) + 1),2) : -1 ;
+}
