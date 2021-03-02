@@ -25,7 +25,7 @@ async function getPeople () {
     const peopleList = await fetch(endpoint);
     const data = await peopleList.json();
     data.results.forEach(async person =>{
-
+        
       const planetList = await fetch(person.homeworld);
       let data = await planetList.json();
       table.innerHTML+=`
