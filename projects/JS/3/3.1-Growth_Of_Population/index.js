@@ -3,10 +3,8 @@
 // town. How many years does the town need to see its population greater or equal to p = 1200
 // inhabitants?
 
-const nbYear = (p0, percent, newInhabitants, maxCapacity) => {
-  for (let year = 0; p0 < maxCapacity; year++) {
-    p0 += (p0 * (percent / 100)) + newInhabitants;
-  }
-  
-  return year + " years";
+const nbYear = (p0, percent, inhab, maxCap) => {
+  for (let year = 0; p0 < maxCap; year++) 
+    p0 += (p0 * (percent / 100)) + inhab;
+  console.log(year + " years");
 }

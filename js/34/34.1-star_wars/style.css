@@ -1,0 +1,13 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+table,th,td {
+  text-align: center;
+  color: #fff;
+  border: 1px solid #999;
+}
+th {  background-color: #333; padding: 3px 10px;}
+td {  background-color: #666; padding: 3px 10px;}
+table {  width: auto;  background-color: #111;}

@@ -1,6 +1,5 @@
 const rows = 20;
 const cols = 25;
-let size = rows*cols;
 let grass = rows-6;
 let ground = rows-5;
 let lava = rows-1;
@@ -8,7 +7,7 @@ let screen = document.querySelector('.game-screen');
 const map = document.querySelector('#wrapper-2');
 const tool = document.querySelectorAll('.tool');
 const inventory = document.querySelectorAll('.inv');
-random = (min,max) => Math.random() * (max - min) + min;
+const random = (min,max) => Math.random() * (max - min) + min;
 
 class Minecraft {
   constructor(width,trees,bushes) {
@@ -123,41 +122,34 @@ function reset(){
 let tiles = document.querySelectorAll('.box');
 tool.forEach((e)=>{
   e.addEventListener('click',()=>{
+    box.classList.remove('cursor-axe');
+    box.classList.remove('cursor-pickaxe');
+    box.classList.remove('cursor-shovel');
+    box.classList.remove('cursor-hoe');
+
     if(e.classList.contains('axe')){
       game.selectedTool ="axe";
       tiles.forEach((box)=>{
         box.classList.add('cursor-axe');
-        box.classList.remove('cursor-pickaxe');
-        box.classList.remove('cursor-shovel');
-        box.classList.remove('cursor-hoe');
       });
-  // url(../img/axe.png), auto;
+
     }
     if(e.classList.contains('pickaxe')){
       game.selectedTool ="pickaxe";
       tiles.forEach((box)=>{
         box.classList.add('cursor-pickaxe');
-        box.classList.remove('cursor-axe');
-        box.classList.remove('cursor-shovel');
-        box.classList.remove('cursor-hoe');
       });
     }
     if(e.classList.contains('shovel')){
       game.selectedTool ="shovel";
       tiles.forEach((box)=>{
         box.classList.add('cursor-shovel');
-        box.classList.remove('cursor-pickaxe');
-        box.classList.remove('cursor-axe');
-        box.classList.remove('cursor-hoe');
       });
     }
     if(e.classList.contains('hoe')){
       game.selectedTool ="hoe";
       tiles.forEach((box)=>{
         box.classList.add('cursor-hoe');
-        box.classList.remove('cursor-pickaxe');
-        box.classList.remove('cursor-shovel');
-        box.classList.remove('cursor-axe');
       });
     }
   })
