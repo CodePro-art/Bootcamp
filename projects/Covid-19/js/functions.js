@@ -45,3 +45,9 @@ async function updateWorld(arr,path){
   }
 }
 
+// fuction to insert data into array
+function toArray (){
+
+}
+
+

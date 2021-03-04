@@ -8,6 +8,7 @@
   <script src="https://kit.fontawesome.com/5a1dafc887.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/load.css">
   <title>Covid 19 API</title>
   
 </head>
@@ -18,14 +19,45 @@
     <hr class="sep" />
   </header>
 
-  <canvas id="chart"></canvas>
+  <section class="container">
+    <div id="canvas-wrap">
+      <canvas id="chart" class="fancy-border"></canvas>
+      <div class="wrapper">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+        <span>Loading</span>
+      </div>
+    </div>
+    
+    <aside class="button-container">
+      <button class="btn asia">Asia</button>
+      <button class="btn oceania">Oceania</button>
+      <button class="btn world">World</button>
+      <button class="btn americas">Americas</button>
+      <button class="btn europe">Europe</button>
+    </aside>
+    <select name="world" id="my-select" class="select">
+      <option selected disabled hidden>World</option>
+      <option class="option" value="Asia">Asia</option>
+      <option class="option" value="Oceania">Oceania</option>
+      <option class="option" value="Africa">Africa</option>
+      <option class="option" value="Americas">Americas</option>
+      <option class="option" value="Europe">Europe</option>
+    </select>
+  </section>
   
+
+  </select>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch-jsonp/1.0.6/fetch-jsonp.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="./js/class.js"></script>
   <script src="./js/functions.js"></script>
-  <script src="./js/chart.js"></script>
   <script src="./js/index.js"></script>
+  <script src="./js/chart.js"></script>
   <script>initPage();</script>
 </body>
 </html>

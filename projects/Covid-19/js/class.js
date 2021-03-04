@@ -44,11 +44,28 @@ class Continent {
 // List of continents
 class World {
   constructor(){
+    this.name = "World";
     this.names = ["Asia","Oceania","Africa","Americas","Europe"];
     this.continents = [];
+    this.newCases = 0;
+    this.newDeaths = 0;
+    this.confirmed = 0;
+    this.totalDeaths = 0;
+    this.recovered = 0;
+    this.critical = 0;
   }
   add(name){
     let c = new Continent(name);
     this.continents.push(c);
+  }
+  update(){
+    this.continents.forEach((cont) => {
+      this.newCases += cont.newCases;
+      this.newDeaths += cont.newDeaths;
+      this.confirmed += cont.confirmed;
+      this.totalDeaths += cont.totalDeaths;
+      this.recovered += cont.recovered;
+      this.critical += cont.critical;
+    });
   }
 }
