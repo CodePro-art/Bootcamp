@@ -1,20 +1,3 @@
-// Define pathes to the API's
-let path1 = "https://corona-api.com/countries";
-let proxy = `https://api.allorigins.win/raw?url=`;
-let path2 = `${proxy}https://restcountries.herokuapp.com/api/v1`;
-
-// define global variables
-const arrCont = ["Asia","Oceania","Africa","Americas","Europe"];
-
-// creating list of continents
-const world = new World();
-
-// Funtion to initialize the web page
-async function initPage(){
-  let arr = await filter(world.names,path2);
-  await updateWorld(arr,path1);    
-}
-
 // function to display in chart -> CONTINENT info
 var ctx = document.getElementById('chart').getContext('2d');
 var myChart = new Chart(ctx, {
@@ -22,7 +5,7 @@ var myChart = new Chart(ctx, {
     data: {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
         datasets: [{
-            label: '# of Votes',
+            label: `${arrCont[0]}`,
             data: [12, 19, 3, 5, 2, 3],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',

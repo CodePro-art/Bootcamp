@@ -59,7 +59,6 @@ async function retrieve () {
   }
 }
 
-
 document.getElementById('my-select').addEventListener('change', function() {
   category = this.value;
   console.log('You selected: ', this.value);
