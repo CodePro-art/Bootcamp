@@ -1,58 +1,16 @@
 // Define pathes to the API's
 let path1 = "https://corona-api.com/countries";
-let path2 = "https://restcountries.herokuapp.com/api/v1";
+let proxy = `https://api.allorigins.win/raw?url=`;
+let path2 = `${proxy}https://restcountries.herokuapp.com/api/v1`;
 
 // define global variables
 const arrCont = ["Asia","Oceania","Africa","Americas","Europe"];
 
-// Class for countries
-class Country {
-  constructor(data,region){
-    this.region = region;
-    this.name;
-    this.newCases;
-    this.newDeaths;
-    this.confirmed = data.confirmed;
-    this.critical = data.critical;
-    this.deaths = data.deaths;
-    this.recovered = data.recovered;
-  }
+// function to find a specific country in covid list
+async function getCountry (path, code){
+  let country  = await get(path + `/${code}`);
+  return country;
 }
-
-// Class for continents
-class Continent {
-  constructor(){
-    this.countries = [];
-    this.totalCases = 0;
-    this.newCases = 0;
-    this.totalDeaths = 0;
-    this.newDeaths = 0;
-    this.totalRecovered = 0;
-    this.Critical = 0;
-  }
-  add(data,region){
-    let c = new Country(data,region);
-    this.countries.push(c);
-    return c;
-  }
-}
-
-// List of continents
-class World {
-  constructor(){
-    this.names = ["Asia","Oceania","Africa","Americas","Europe"];
-    this.continents = [];
-  }
-  add(){
-    let c = new Continent();
-    this.continents.push(c);
-  }
-}
-
-// creating list of continents
-const world = new World();
-world.add(arrCont);
-
 
 // function to fetch info from API
 async function get(endpoint){
@@ -64,25 +22,38 @@ async function get(endpoint){
   }
 }
 
+// function to devide the list into continents
+async function filter (continent,path){
+  let array = [];
+  for(let i = 0 ; i<continent.length; i++){
+    let country = await get(path + `/region/${continent[i]}`);
+    array.push(country);
+  }
+  return array;
+}
+
+// creating list of continents
+const world = new World();
+
 // Funtion to initialize the web page
 async function initPage(){
   let covid = await get(path1);
-  let country = await get(path2);
+  // let country = await get(path2);
+  let arr = await filter(world.names,path2);
   
-  for(let i=0;i<world.names.length;i++){
-    var filtered = Object.keys(country).reduce((r, e) => {
-                    if (acceptedValues.includes(country[e])) r[e] = country[e]
-                      return r;
-                    }, {})
-    console.log(country[i].region);
+  for(let i = 0; i<arr.length; i++){
+    // add new continent into world
+    world.add(world.names[i]);
+
+    // loop each continent
+    for(const e in arr[i]){
+      // kosorov does not exist in the covid API's list
+      if (arr[i][e].cca2 === "XK")
+        continue;
+      let country = await getCountry(path1,arr[i][e].cca2);
+      world.continents[i].add(country.data.latest_data,country.data.today,world.names[i],country.data.name)
+    }
   }
-  // console.log(country[0].name);
-  
-  // console.log(covid.data[0].name);
-
-  // country.forEach((e) => {
-  //   console.log(e.name);
-  // });
-
-
+    
+  console.log(world);
 }
