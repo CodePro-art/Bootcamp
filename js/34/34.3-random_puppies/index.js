@@ -19,6 +19,7 @@ async function getDog (number) {
     
         const promis = await fetch(endpoint);
         const data = await promis.json();
+        console.log(data);
         image.setAttribute("src",data.message)
         document.body.appendChild(image);
       }
