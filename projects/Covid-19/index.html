@@ -6,16 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="" />
   <script src="https://kit.fontawesome.com/5a1dafc887.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+  <link rel="stylesheet" href="./css/style.css">
   <title>Covid 19 API</title>
   
 </head>
 <body>
 
+  <header class="header">
+    <h1 class="title">Covid-19 statistics</h1>
+    <hr class="sep" />
+  </header>
+
+  <canvas id="chart" width="400" height="400"></canvas>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch-jsonp/1.0.6/fetch-jsonp.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="./class.js"></script>
-  <script src="./index.js"></script>
+  <script src="./js/class.js"></script>
+  <script src="./js/functions.js"></script>
+  <script src="./js/index.js"></script>
   <script>initPage();</script>
 </body>
 </html>

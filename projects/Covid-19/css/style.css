@@ -1,0 +1,50 @@
+/* reset */
+*, *:before, *:after {
+	box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* general body */
+body {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url(https://unsplash.it/1800/800?image=893);
+  background-size: cover;
+  background-position: 50%;
+  font-family: "Cutive Mono", monospace;
+}
+
+body:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(17, 17, 17, 0.9);
+}
+body >*{
+  z-index: 5;
+}
+.header {
+  border: 1px solid wheat;
+  margin: 0px auto;
+	padding: 3%;
+  color: #fff;
+}
+.title {
+  font-family: "Cutive Mono", monospace;
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+#chart {
+  border: 1px solid wheat;
+  z-index: 5;
+}

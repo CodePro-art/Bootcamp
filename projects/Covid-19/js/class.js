@@ -21,16 +21,22 @@ class Continent {
   constructor(name){
     this.name = name;
     this.countries = [];
-    this.totalCases = 0;
     this.newCases = 0;
-    this.totalDeaths = 0;
     this.newDeaths = 0;
-    this.totalRecovered = 0;
-    this.Critical = 0;
+    this.confirmed = 0;
+    this.totalDeaths = 0;
+    this.recovered = 0;
+    this.critical = 0;
   }
   add(data,today,region,name){
     let c = new Country(data,today,region,name);
     this.countries.push(c);
+    this.newCases += today.confirmed;
+    this.newDeaths += today.deaths;
+    this.confirmed += data.confirmed;
+    this.totalDeaths += data.deaths;
+    this.recovered += data.recovered;
+    this.critical += data.critical;
     return c;
   }
 }
