@@ -126,8 +126,12 @@ function displayNew(element,container,arr,data) {
 
 // function to change the select options
 function changeDropDown(element) {
-  select.innerHTML = `<option selected disabled hidden>${element.name}</option>`
+  const myNode = document.getElementById("my-select");
+  myNode.innerHTML = '';
+  
+  // console.log(element.name);
+  myNode.innerHTML = `<option selected disabled hidden>${element.name}</option>`;
   for(const item of element.list){
-    select.innerHTML += `<option class="option" value="${item}">${item}</option>`
+    myNode.innerHTML += `<option class="option" value="${item.name}">${item.name}</option>`
   }
 }

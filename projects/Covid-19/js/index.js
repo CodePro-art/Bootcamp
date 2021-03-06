@@ -9,7 +9,6 @@ const loader = document.querySelector('.wrapper');
 const canvasWrapper = document.querySelector('#canvas-wrap');
 const buttons = document.querySelectorAll('.btn');
 const link = document.querySelectorAll('a');
-const select = document.querySelectorAll('select');
 
 // creating list of continents
 const world = new World("World");
@@ -43,8 +42,9 @@ link.forEach((e) => {
 
 // option
 document.getElementById('my-select').addEventListener('change', function() {
+  console.log(this.value);
   let target = world.names.indexOf(this.value);
-  current = target === -1 ? world : world.list[target];
+  current = target === -1 ? current.list.indexOf(this.value) : world.list[target];
   let btn = document.querySelector(`#${current.name}`);
   btn.click();
 });
@@ -54,8 +54,8 @@ async function initPage(){
   let arr = await filter(world.names,path2);
   await updateWorld(arr,path1);
   loader.setAttribute("style","display: none;");
-  console.log(world.list);
   barChart(current,toArray(current.list, stat));
+  btn.forEach((e)=>{ e.disabled =false; });
 }
 
 
