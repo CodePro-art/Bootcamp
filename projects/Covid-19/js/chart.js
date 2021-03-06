@@ -1,10 +1,11 @@
 // function to display in chart -> CONTINENT info
 function barChart(element,data){
     const ctx = document.getElementById('chart').getContext('2d');
+    let lables = toArray(element.list,"name").map(e => abriviate(e));
     const myChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: toArray(element.list,"name"),
+            labels: lables,
             datasets: [{
                 label: `${stat} `,
                 data: data,
@@ -24,7 +25,7 @@ function barChart(element,data){
             },
             legend: {
                 labels: {
-                fontColor: '#cccccc',
+                fontColor: 'white',
                 fontSize: 20
                 }
              },
@@ -32,13 +33,13 @@ function barChart(element,data){
                 yAxes: [{
                     ticks: {
                         beginAtZero: false,
-                        fontColor: '#cccccc', 
+                        fontColor: 'white', 
                     }
                 }],
                 xAxes: [{
                     ticks: {
                         beginAtZero: false,
-                        fontColor: '#cccccc', 
+                        fontColor: 'white', 
                     }
                 }]
             }

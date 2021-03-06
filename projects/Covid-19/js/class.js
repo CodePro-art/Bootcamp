@@ -7,6 +7,8 @@ class Country {
   constructor(data,today,region,name){
     this.name = name;
     this.region = region;
+    this.newCases = today.confirmed;
+    this.newDeaths = today.deaths;
     this.confirmed = data.confirmed+today.confirmed;
     this.deaths = data.deaths+today.deaths;
     this.recovered = data.recovered;
@@ -16,6 +18,10 @@ class Country {
     switch(param) {
       case "name":
         return this.name;
+      case "newCases":
+        return this.newCases;
+      case "newDeaths":
+        return this.newDeaths;
       case "confirmed":
         return this.confirmed;
       case "deaths":

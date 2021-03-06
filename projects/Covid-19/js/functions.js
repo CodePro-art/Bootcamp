@@ -29,7 +29,7 @@ async function filter(continent,path){
 }
 
 // function to insert world <- continents <- countries
-async function updateWorld(arr,path){
+async function updateWorld (arr,path){
   for(let i = 0; i<arr.length; i++){
     // add new continent into world
     world.add(world.names[i]);
@@ -115,7 +115,7 @@ function borderColor (data) {
 }
 
 // function to display new chart
-function displayNew(element,container,arr,data) {
+function displayNew (element,container,arr,data) {
   element.remove();
   let chart = document.createElement("canvas");
   chart.setAttribute("id","chart");
@@ -125,7 +125,7 @@ function displayNew(element,container,arr,data) {
 }
 
 // function to change the select options
-function changeDropDown(element) {
+function changeDropDown (element) {
   const myNode = document.getElementById("my-select");
   myNode.innerHTML = '';
   
@@ -134,4 +134,25 @@ function changeDropDown(element) {
   for(const item of element.list){
     myNode.innerHTML += `<option class="option" value="${item.name}">${item.name}</option>`
   }
+}
+
+// function to enable buttons
+function enable (arr) {
+  arr.forEach((e)=>{ e.disabled =false; });
+}
+
+// function to display country's statistics
+function displayCounrty (country) {
+  let details = document.querySelectorAll('.number');
+  document.getElementById("country-name").innerHTML = `Country Details: ${country.name}`
+  console.log(details);
+  details.forEach((detail) => {
+    detail.innerHTML = `${country.get(detail.id)}`;   
+  });
+}
+
+// function to shorten too long country names
+function abriviate (string) {
+  let arr = string.split(" "); 
+  return arr.length >= 3 ? `${arr[0]}.${arr[1].charAt(0).toUpperCase()}.${arr[2].charAt(0).toUpperCase()}`: string;
 }

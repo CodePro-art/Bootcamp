@@ -1,22 +1,26 @@
-// Define pathes to the API's
+// ======================= PATHs for API request ===================== //
+
 let path1 = "https://corona-api.com/countries";
 let proxy = `https://api.allorigins.win/raw?url=`;
 let path2 = `${proxy}https://restcountries.herokuapp.com/api/v1`;
 
-// define global variables
-const arrCont = ["Asia","Oceania","Africa","Americas","Europe"];
+// ======================= Global selectors ========================== //
+
 const loader = document.querySelector('.wrapper');
 const canvasWrapper = document.querySelector('#canvas-wrap');
 const buttons = document.querySelectorAll('.btn');
 const link = document.querySelectorAll('a');
 
-// creating list of continents
+// ======================= global variables ========================== //
+
 const world = new World("World");
 let current = world;
 let stat = "confirmed";
 
-// define eventlisteners:
-// buttons
+// ======================= EVENT LISTENERS ========================== //
+
+// ------------------(( buttons ))------------------------------------//
+
 buttons.forEach((e) => {
   e.addEventListener('click',() => { 
     buttons.forEach((c) => {c.classList.remove('selected')}); 
@@ -29,10 +33,12 @@ buttons.forEach((e) => {
   })
 });
 
-// links
+// -------------------------(( links ))--------------------------------//
+
 link.forEach((e) => {
   e.addEventListener('click',() => {
     stat = e.id;
+    console.log(stat);
     link.forEach((c) => {c.classList.remove(c.id)})
     e.classList.add(e.id);
     let btn = document.querySelector(`#${current.name}`);
@@ -40,22 +46,31 @@ link.forEach((e) => {
   });
 });
 
-// option
+// ------------------------(( options ))----------------------------------//
+
 document.getElementById('my-select').addEventListener('change', function() {
-  console.log(this.value);
   let target = world.names.indexOf(this.value);
-  current = target === -1 ? current.list.indexOf(this.value) : world.list[target];
-  let btn = document.querySelector(`#${current.name}`);
-  btn.click();
+  let countryName = this.value;
+  if (current !== world){
+    for(const country of current.list)
+      if(country.name === countryName)
+        displayCounrty(country)   
+  }else{
+    current = world.list[target];
+    let btn = document.querySelector(`#${current.name}`);
+    btn.click();
+  }  
 });
 
-// Funtion to initialize the web page
+// ======================= First Function on the page ========================== //
+
 async function initPage(){
   let arr = await filter(world.names,path2);
   await updateWorld(arr,path1);
   loader.setAttribute("style","display: none;");
   barChart(current,toArray(current.list, stat));
-  btn.forEach((e)=>{ e.disabled =false; });
+  enable(buttons);
+  document.getElementById('my-select').disabled =false;
 }
 
 
