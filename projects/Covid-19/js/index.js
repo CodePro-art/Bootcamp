@@ -8,28 +8,54 @@ const arrCont = ["Asia","Oceania","Africa","Americas","Europe"];
 const loader = document.querySelector('.wrapper');
 const canvasWrapper = document.querySelector('#canvas-wrap');
 const buttons = document.querySelectorAll('.btn');
-let status = "confirmed";
+const link = document.querySelectorAll('a');
+const select = document.querySelectorAll('select');
+
+// creating list of continents
+const world = new World("World");
+let current = world;
+let stat = "confirmed";
 
 // define eventlisteners:
+// buttons
 buttons.forEach((e) => {
-  e.addEventListener('click',() => {
+  e.addEventListener('click',() => { 
+    buttons.forEach((c) => {c.classList.remove('selected')}); 
+    e.classList.add('selected');
     let chart = document.querySelector('#chart');
-    let continent = world.list[world.names.indexOf(e.id)];
-    if(world.names.indexOf(e.id) === -1)
-      displayNew(chart, canvasWrapper, world, toArray(world.list,"status") );
-    else
-      displayNew(chart, canvasWrapper, continent, toArray(continent.list,"status"));
+    let target = world.names.indexOf(e.id);
+    current = target === -1 ? world : world.list[target];
+    changeDropDown(current);
+    displayNew(chart, canvasWrapper, current, toArray(current.list,stat));
   })
 });
 
+// links
+link.forEach((e) => {
+  e.addEventListener('click',() => {
+    stat = e.id;
+    link.forEach((c) => {c.classList.remove(c.id)})
+    e.classList.add(e.id);
+    let btn = document.querySelector(`#${current.name}`);
+    btn.click();
+  });
+});
 
-// creating list of continents
-const world = new World("world");
+// option
+document.getElementById('my-select').addEventListener('change', function() {
+  let target = world.names.indexOf(this.value);
+  current = target === -1 ? world : world.list[target];
+  let btn = document.querySelector(`#${current.name}`);
+  btn.click();
+});
 
 // Funtion to initialize the web page
 async function initPage(){
   let arr = await filter(world.names,path2);
   await updateWorld(arr,path1);
   loader.setAttribute("style","display: none;");
-  barChart(world,toArray(world.list, status));
+  console.log(world.list);
+  barChart(current,toArray(current.list, stat));
 }
+
+

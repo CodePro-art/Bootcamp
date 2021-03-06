@@ -1,13 +1,14 @@
 // function to display in chart -> CONTINENT info
-function barChart(element,data,category){
+function barChart(element,data){
     const ctx = document.getElementById('chart').getContext('2d');
     const myChart = new Chart(ctx, {
-        type: 'bar',
+        type: 'line',
         data: {
             labels: toArray(element.list,"name"),
             datasets: [{
-                label: `${element.name.toUpperCase()}: ${category}`,
+                label: `${stat} `,
                 data: data,
+                fill: false,
                 backgroundColor: bgColor(data),
                 hoverBackgroundColor: hoverBgColor(data),
                 borderColor: borderColor(data),
@@ -15,10 +16,29 @@ function barChart(element,data,category){
             }]
         },
         options: {
-            scales: {
+            title: {
+                display: true,
+                text: `${element.name}`,
+                fontSize: 20,
+                fontColor: 'white',
+            },
+            legend: {
+                labels: {
+                fontColor: '#cccccc',
+                fontSize: 20
+                }
+             },
+            scales:  {
                 yAxes: [{
                     ticks: {
-                        beginAtZero: false, 
+                        beginAtZero: false,
+                        fontColor: '#cccccc', 
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        beginAtZero: false,
+                        fontColor: '#cccccc', 
                     }
                 }]
             }
@@ -26,44 +46,4 @@ function barChart(element,data,category){
     });
 }
 
-// function to display one country's details
-function pieChart(){
-    const ctx = document.getElementById('chart').getContext('2d');
-    const myChart = new Chart(ctx, {
-        type: 'pie',
-        data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-            datasets: [{
-                label: `${arrCont[0]}`,
-                data: [12, 19, 3, 5, 2, 3],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-                ],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
-                    }
-                }]
-            }
-        }
-    });
-}
 

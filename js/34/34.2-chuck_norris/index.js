@@ -2,7 +2,6 @@
 const endpoint  = "https://api.chucknorris.io/jokes/random";
 const endpoint1  = "https://api.chucknorris.io/jokes/categories";
 let category;
-// const category = `?category=${category}`
 
 let buttons = document.querySelectorAll('.btn');
 let select = document.querySelector('select');

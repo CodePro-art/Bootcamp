@@ -31,7 +31,6 @@ body:after {
 }
 body >* {
   z-index: 5;
-  border: 1px solid white;
 }
 
 .header {
@@ -48,7 +47,7 @@ body >* {
 
 .container {
   max-width: 1000px;
-  min-width: 500px;
+  min-width: 750px;
   width: 80vw;
   display: flex;
   flex-direction: column;
@@ -96,43 +95,44 @@ select option {
 }
 .btn{
   position: relative;
-  text-align: center;
   padding: 5px 10px;
   height: 30px;
   border: 1px solid #fff;
+  transition: .5s;
   background-image: linear-gradient(#405661 45%, #1d2a31 55%);
-  -webkit-box-shadow: 0 0 5px #fff;
-  box-shadow: 0 0 5px #fff;
   color: #fff;
   cursor: pointer;
 }
 .btn:hover {
-  -webkit-box-shadow: 0 0 10px #fff;
-  box-shadow: 0 0 10px #fff;
-  transition: .3s;
+  -webkit-box-shadow: 0 0 5px #fff;
+  box-shadow: 0 0 5px #fff;
+  transition: .2s;
 }
-.btn:hover > a {
-  display: block;
 
-}
 .btn.world{
-  padding: none;
-  align-self: center;
+  position: absolute;
   text-shadow: -1px 0 black,
   0 1px black,
   1px 0 black,
   0 -1px black;
-  border: none;
+  border: 2px solid #fff;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   background: url(../img/world-icon.png) no-repeat center center / cover;
+  z-index: 100;
 }
 
 .world:focus{
   outline: none;
 }
 
+.selected {
+  transition: .5s;
+  background-image: linear-gradient(#90b3c5 45%, #334f5e 55%);
+}
+
+/* CATEGORIES */
 a {
   text-decoration: none;
   color: #fff;
@@ -151,19 +151,61 @@ ul {
 .fa-temperature-high {
   transition: .3s;
 }
-.confirmed:hover >* {
-  color: green;
+#confirmed:hover >* {
+  color: rgb(0, 185, 0);
+  text-shadow: -1px 0 rgb(123, 255, 141),
+  0 1px rgb(123, 255, 141),
+  1px 0 rgb(123, 255, 141),
+  0 -1px rgb(123, 255, 141);
 }
-.deaths:hover >*  {
+#deaths:hover >*  {
   color: black;
-  text-shadow: -1px 0 #fff,
-  0 1px #fff,
-  1px 0 #fff,
-  0 -1px #fff;
+  text-shadow: -1px 0 #888,
+  0 1px #888,
+  1px 0 #888,
+  0 -1px #888;
 }
-.recovered:hover >*  {
+#recovered:hover >*  {
   color: red;
+  text-shadow: -1px 0 rgb(255, 152, 255),
+  0 1px rgb(255, 152, 255),
+  1px 0 rgb(255, 152, 255),
+  0 -1px rgb(255, 152, 255);
 }
-.critical:hover >*  {
+#critical:hover >*  {
   color: red;
+  text-shadow: -1px 0 rgb(255, 168, 5),
+  0 1px rgb(255, 168, 5),
+  1px 0 rgb(255, 168, 5),
+  0 -1px rgb(255, 168, 5);
 }
+
+.confirmed >*{
+  color: rgb(0, 185, 0);
+  text-shadow: -1px 0 rgb(123, 255, 141),
+  0 1px rgb(123, 255, 141),
+  1px 0 rgb(123, 255, 141),
+  0 -1px rgb(123, 255, 141);
+}
+.deaths >*{
+  color: black;
+  text-shadow: -1px 0 #888,
+  0 1px #888,
+  1px 0 #888,
+  0 -1px #888;
+}
+.recovered >*{
+  color: red;
+  text-shadow: -1px 0 rgb(255, 152, 255),
+  0 1px rgb(255, 152, 255),
+  1px 0 rgb(255, 152, 255),
+  0 -1px rgb(255, 152, 255);
+}
+.critical >*{
+  color: red;
+  text-shadow: -1px 0 rgb(255, 168, 5),
+  0 1px rgb(255, 168, 5),
+  1px 0 rgb(255, 168, 5),
+  0 -1px rgb(255, 168, 5);
+}
+

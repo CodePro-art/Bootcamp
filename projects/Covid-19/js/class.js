@@ -7,10 +7,8 @@ class Country {
   constructor(data,today,region,name){
     this.name = name;
     this.region = region;
-    this.newCases = today.confirmed;
-    this.newDeaths = today.deaths;
-    this.confirmed = data.confirmed;
-    this.deaths = data.deaths;
+    this.confirmed = data.confirmed+today.confirmed;
+    this.deaths = data.deaths+today.deaths;
     this.recovered = data.recovered;
     this.critical = data.critical;
   }
@@ -18,10 +16,6 @@ class Country {
     switch(param) {
       case "name":
         return this.name;
-      case "newCases":
-        return this.newCases;
-      case "newDeaths":
-        return this.newDeaths;
       case "confirmed":
         return this.confirmed;
       case "deaths":
@@ -39,8 +33,6 @@ class Continent {
   constructor(name){
     this.name = name;
     this.list = [];
-    this.newCases = 0;
-    this.newDeaths = 0;
     this.confirmed = 0;
     this.deaths = 0;
     this.recovered = 0;
@@ -49,10 +41,8 @@ class Continent {
   add(data,today,region,name){
     let c = new Country(data,today,region,name);
     this.list.push(c);
-    this.newCases += today.confirmed;
-    this.newDeaths += today.deaths;
-    this.confirmed += data.confirmed;
-    this.deaths += data.deaths;
+    this.confirmed += data.confirmed+today.confirmed;
+    this.deaths += data.deaths+today.deaths;
     this.recovered += data.recovered;
     this.critical += data.critical;
     return c;
@@ -61,10 +51,6 @@ class Continent {
     switch(param) {
       case "name":
         return this.name;
-      case "newCases":
-        return this.newCases;
-      case "newDeaths":
-        return this.newDeaths;
       case "confirmed":
         return this.confirmed;
       case "deaths":
@@ -82,8 +68,6 @@ class World {
     this.name = name;
     this.names = ["Asia","Oceania","Africa","Americas","Europe"];
     this.list = [];
-    this.newCases = 0;
-    this.newDeaths = 0;
     this.confirmed = 0;
     this.deaths = 0;
     this.recovered = 0;
@@ -97,10 +81,6 @@ class World {
     switch(param) {
       case "name":
         return this.name;
-      case "newCases":
-        return this.newCases;
-      case "newDeaths":
-        return this.newDeaths;
       case "confirmed":
         return this.confirmed;
       case "deaths":
@@ -113,10 +93,8 @@ class World {
   }
   update(){
     this.list.forEach((cont) => {
-      this.newCases += cont.newCases;
-      this.newDeaths += cont.newDeaths;
       this.confirmed += cont.confirmed;
-      this.totalDeaths += cont.totalDeaths;
+      this.deaths += cont.totalDeaths;
       this.recovered += cont.recovered;
       this.critical += cont.critical;
     });

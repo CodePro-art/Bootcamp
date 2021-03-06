@@ -123,3 +123,11 @@ function displayNew(element,container,arr,data) {
   container.appendChild(chart);
   barChart(arr,data);
 }
+
+// function to change the select options
+function changeDropDown(element) {
+  select.innerHTML = `<option selected disabled hidden>${element.name}</option>`
+  for(const item of element.list){
+    select.innerHTML += `<option class="option" value="${item}">${item}</option>`
+  }
+}
