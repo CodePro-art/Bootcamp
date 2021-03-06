@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------
-// -------------------------------------- classes definition --------------------------------------
+// -------------------------------------- classes definition ----------------------------------------------
 // --------------------------------------------------------------------------------------------------------
 
 // Class for countries
@@ -10,9 +10,27 @@ class Country {
     this.newCases = today.confirmed;
     this.newDeaths = today.deaths;
     this.confirmed = data.confirmed;
-    this.critical = data.critical;
     this.deaths = data.deaths;
     this.recovered = data.recovered;
+    this.critical = data.critical;
+  }
+  get(param){
+    switch(param) {
+      case "name":
+        return this.name;
+      case "newCases":
+        return this.newCases;
+      case "newDeaths":
+        return this.newDeaths;
+      case "confirmed":
+        return this.confirmed;
+      case "deaths":
+        return this.deaths;
+      case "recovered":
+        return this.recovered;
+      case "critical":
+        return this.critical;
+    }
   }
 }
 
@@ -20,46 +38,81 @@ class Country {
 class Continent {
   constructor(name){
     this.name = name;
-    this.countries = [];
+    this.list = [];
     this.newCases = 0;
     this.newDeaths = 0;
     this.confirmed = 0;
-    this.totalDeaths = 0;
+    this.deaths = 0;
     this.recovered = 0;
     this.critical = 0;
   }
   add(data,today,region,name){
     let c = new Country(data,today,region,name);
-    this.countries.push(c);
+    this.list.push(c);
     this.newCases += today.confirmed;
     this.newDeaths += today.deaths;
     this.confirmed += data.confirmed;
-    this.totalDeaths += data.deaths;
+    this.deaths += data.deaths;
     this.recovered += data.recovered;
     this.critical += data.critical;
     return c;
   }
+  get(param){
+    switch(param) {
+      case "name":
+        return this.name;
+      case "newCases":
+        return this.newCases;
+      case "newDeaths":
+        return this.newDeaths;
+      case "confirmed":
+        return this.confirmed;
+      case "deaths":
+        return this.deaths;
+      case "recovered":
+        return this.recovered;
+      case "critical":
+        return this.critical;
+    }
+  }
 }
-
 // List of continents
 class World {
-  constructor(){
-    this.name = "World";
+  constructor(name){
+    this.name = name;
     this.names = ["Asia","Oceania","Africa","Americas","Europe"];
-    this.continents = [];
+    this.list = [];
     this.newCases = 0;
     this.newDeaths = 0;
     this.confirmed = 0;
-    this.totalDeaths = 0;
+    this.deaths = 0;
     this.recovered = 0;
     this.critical = 0;
   }
   add(name){
     let c = new Continent(name);
-    this.continents.push(c);
+    this.list.push(c);
+  }
+  get(param){
+    switch(param) {
+      case "name":
+        return this.name;
+      case "newCases":
+        return this.newCases;
+      case "newDeaths":
+        return this.newDeaths;
+      case "confirmed":
+        return this.confirmed;
+      case "deaths":
+        return this.deaths;
+      case "recovered":
+        return this.recovered;
+      case "critical":
+        return this.critical;
+    }
   }
   update(){
-    this.continents.forEach((cont) => {
+    this.list.forEach((cont) => {
       this.newCases += cont.newCases;
       this.newDeaths += cont.newDeaths;
       this.confirmed += cont.confirmed;

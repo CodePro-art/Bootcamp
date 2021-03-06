@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------
-// -------------------------------------- Functions! -------------------------------------------------
+// -------------------------------------- Functions! ------------------------------------------------------
 // --------------------------------------------------------------------------------------------------------
 
 // function to find a specific country in covid list
@@ -40,14 +40,86 @@ async function updateWorld(arr,path){
       if (arr[i][e].cca2 === "XK")
         continue;
       let country = await getCountry(path,arr[i][e].cca2);
-      world.continents[i].add(country.data.latest_data,country.data.today,world.names[i],country.data.name)
+      world.list[i].add(country.data.latest_data,country.data.today,world.names[i],country.data.name)
     }
   }
+  world.update();
 }
 
-// fuction to insert data into array
-function toArray (){
-
+// fuction to insert data into array by required stat
+function toArray (arr,stat){
+  let array = [];
+  arr.forEach(element => {
+    array.push(element.get(stat));
+  });
+  return array;
 }
 
+// function to alternate colors of chart bars
+function bgColor (data) {
+  return arr = data.map((e,i) => {
+    switch(i%6) {
+      case 0:
+        return 'rgba(255, 99, 132, 0.2)';
+      case 1:
+        return 'rgba(54, 162, 235, 0.2)';
+      case 2:
+        return 'rgba(255, 206, 86, 0.2)';
+      case 3:
+        return 'rgba(75, 192, 192, 0.2)';
+      case 4:
+        return 'rgba(153, 102, 255, 0.2)';
+      case 5:
+        return 'rgba(255, 159, 64, 0.2)';
+    }
+  });
+}
+// function to alternate colors of chart bars :HOVER
+function hoverBgColor (data) {
+  return arr = data.map((e,i) => {
+    switch(i%6) {
+      case 0:
+        return 'rgba(255, 99, 132, 0.5)';
+      case 1:
+        return 'rgba(54, 162, 235, 0.5)';
+      case 2:
+        return 'rgba(255, 206, 86, 0.5)';
+      case 3:
+        return 'rgba(75, 192, 192, 0.5)';
+      case 4:
+        return 'rgba(153, 102, 255, 0.5)';
+      case 5:
+        return 'rgba(255, 159, 64, 0.5)';
+    }
+  });
+}
 
+// function to alternate colors of chart bar's border
+function borderColor (data) {
+  return arr = data.map((e,i) => {
+    switch(i%6) {
+      case 0:
+        return 'rgba(255, 99, 132, 1)';
+      case 1:
+        return 'rgba(54, 162, 235, 1)';
+      case 2:
+        return 'rgba(255, 206, 86, 1)';
+      case 3:
+        return 'rgba(75, 192, 192, 1)';
+      case 4:
+        return 'rgba(153, 102, 255, 1)';
+      case 5:
+        return 'rgba(255, 159, 64, 1)';
+    }
+  });
+}
+
+// function to display new chart
+function displayNew(element,container,arr,data) {
+  element.remove();
+  let chart = document.createElement("canvas");
+  chart.setAttribute("id","chart");
+  chart.setAttribute("class","fancy-border");
+  container.appendChild(chart);
+  barChart(arr,data);
+}

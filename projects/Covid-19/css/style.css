@@ -31,11 +31,12 @@ body:after {
 }
 body >* {
   z-index: 5;
-  /* border: 1px solid white; */
+  border: 1px solid white;
 }
+
 .header {
   margin: 0px auto;
-	padding: 2%;
+	padding: 1%;
   color: #fff;
 }
 .title {
@@ -46,8 +47,9 @@ body >* {
 }
 
 .container {
-  max-width: 700px;
-  width: 700px;
+  max-width: 1000px;
+  min-width: 500px;
+  width: 80vw;
   display: flex;
   flex-direction: column;
   align-self: center;
@@ -87,7 +89,13 @@ select option {
   align-items: center;
 }
 
+.category-container{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+}
 .btn{
+  position: relative;
   text-align: center;
   padding: 5px 10px;
   height: 30px;
@@ -100,8 +108,11 @@ select option {
 }
 .btn:hover {
   -webkit-box-shadow: 0 0 10px #fff;
-        box-shadow: 0 0 10px #fff;
+  box-shadow: 0 0 10px #fff;
   transition: .3s;
+}
+.btn:hover >* {
+  display: block;
 }
 .btn.world{
   padding: none;
@@ -119,4 +130,42 @@ select option {
 
 .world:focus{
   outline: none;
+}
+
+a {
+  text-decoration: none;
+  position: absolute;
+  color: transparent;
+  top: 0;
+  left: 0;
+}
+
+.confirmed,
+.deaths,
+.recovered,
+.critical {
+  transition: 1s;
+  background-color: turquoise;
+  border-radius: 50%;
+}
+
+.confirmed{
+  animation: away1 0.5s;
+}
+.deaths{
+  animation: away2 0.5s;
+}
+.recovered{
+  animation: away3 0.5s;
+}
+.critical{
+  animation: away4 0.5s;
+}
+@keyframes away {
+  
+  0%   {background: red; left: 0px; top: 0px;}
+  25%  {background: yellow; left: 200px; top: 0px;}
+  50%  {background: blue; left: 200px; top: 200px;}
+  75%  {background: green; left: 0px; top: 200px;}
+  100% {background: red; left: 0px; top: 0px;}
 }

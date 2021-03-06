@@ -18,7 +18,7 @@
     <h1 class="title">Covid-19 statistics</h1>
     <hr class="sep" />
   </header>
-
+  
   <section class="container">
     <div id="canvas-wrap">
       <canvas id="chart" class="fancy-border"></canvas>
@@ -34,11 +34,16 @@
     </div>
     
     <aside class="button-container">
-      <button class="btn asia">Asia</button>
-      <button class="btn oceania">Oceania</button>
-      <button class="btn world">World</button>
-      <button class="btn americas">Americas</button>
-      <button class="btn europe">Europe</button>
+      <button class="btn" id="Asia">Asia
+        <a href="#" style="display: none;" class="category confirmed">confirmed</a>
+        <a href="#" style="display: none;" class="category deaths">deaths</a>
+        <a href="#" style="display: none;" class="category recovered">recovered</a>
+        <a href="#" style="display: none;" class="category critical">critical</a>
+      </button>
+      <button class="btn" id="Oceania">Oceania</button>
+      <button class="btn world" id="World">World</button>
+      <button class="btn" id="Americas">Americas</button>
+      <button class="btn" id="Europe">Europe</button>
     </aside>
     <select name="world" id="my-select" class="select">
       <option selected disabled hidden>World</option>
