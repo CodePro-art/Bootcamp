@@ -111,8 +111,9 @@ select option {
   box-shadow: 0 0 10px #fff;
   transition: .3s;
 }
-.btn:hover >* {
+.btn:hover > a {
   display: block;
+
 }
 .btn.world{
   padding: none;
@@ -134,38 +135,35 @@ select option {
 
 a {
   text-decoration: none;
-  position: absolute;
-  color: transparent;
-  top: 0;
-  left: 0;
+  color: #fff;
 }
 
-.confirmed,
-.deaths,
-.recovered,
-.critical {
-  transition: 1s;
-  background-color: turquoise;
-  border-radius: 50%;
+ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  color: #fff;
 }
 
-.confirmed{
-  animation: away1 0.5s;
+.fa-virus,
+.fa-skull-crossbones,
+.fa-heart,
+.fa-temperature-high {
+  transition: .3s;
 }
-.deaths{
-  animation: away2 0.5s;
+.confirmed:hover >* {
+  color: green;
 }
-.recovered{
-  animation: away3 0.5s;
+.deaths:hover >*  {
+  color: black;
+  text-shadow: -1px 0 #fff,
+  0 1px #fff,
+  1px 0 #fff,
+  0 -1px #fff;
 }
-.critical{
-  animation: away4 0.5s;
+.recovered:hover >*  {
+  color: red;
 }
-@keyframes away {
-  
-  0%   {background: red; left: 0px; top: 0px;}
-  25%  {background: yellow; left: 200px; top: 0px;}
-  50%  {background: blue; left: 200px; top: 200px;}
-  75%  {background: green; left: 0px; top: 200px;}
-  100% {background: red; left: 0px; top: 0px;}
+.critical:hover >*  {
+  color: red;
 }

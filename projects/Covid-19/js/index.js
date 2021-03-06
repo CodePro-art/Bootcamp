@@ -8,6 +8,7 @@ const arrCont = ["Asia","Oceania","Africa","Americas","Europe"];
 const loader = document.querySelector('.wrapper');
 const canvasWrapper = document.querySelector('#canvas-wrap');
 const buttons = document.querySelectorAll('.btn');
+let status = "confirmed";
 
 // define eventlisteners:
 buttons.forEach((e) => {
@@ -15,9 +16,9 @@ buttons.forEach((e) => {
     let chart = document.querySelector('#chart');
     let continent = world.list[world.names.indexOf(e.id)];
     if(world.names.indexOf(e.id) === -1)
-      displayNew(chart, canvasWrapper, world, toArray(world.list,"confirmed") );
+      displayNew(chart, canvasWrapper, world, toArray(world.list,"status") );
     else
-      displayNew(chart, canvasWrapper, continent, toArray(continent.list,"confirmed"));
+      displayNew(chart, canvasWrapper, continent, toArray(continent.list,"status"));
   })
 });
 
@@ -30,5 +31,5 @@ async function initPage(){
   let arr = await filter(world.names,path2);
   await updateWorld(arr,path1);
   loader.setAttribute("style","display: none;");
-  barChart(world,toArray(world.list,"confirmed"));
+  barChart(world,toArray(world.list, status));
 }
