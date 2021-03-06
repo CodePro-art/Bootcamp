@@ -12,7 +12,7 @@ body {
   flex-direction: column;
   position: relative;
   width: 100%;
-  height: 130vh;
+  height: 150vh;
   background: url(https://unsplash.it/1800/800?image=893);
   background-size: cover;
   background-position: 50%;
@@ -46,7 +46,7 @@ body >* {
 
 .container {
   max-width: 1000px;
-  min-width: 750px;
+  min-width: 600px;
   width: 80vw;
   display: flex;
   flex-direction: column;
@@ -232,7 +232,69 @@ ul {
 
 .number-container {
   display: flex;
-  height: 100%;
   align-items: center;
   justify-content: center;
+}
+
+@media only screen and (max-width: 1000px) {
+  .detail p{
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .btn.world {
+    height: 40px;
+    width: 40px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  body {
+    width: 100vw;
+  }
+  body >* {
+    height: 200vh;
+  }
+  .header{
+    text-align: center;
+    height: auto;
+    padding: 0;
+    margin: 0;
+  }
+  .button-container{
+    flex-direction: column;
+  }
+  .btn{
+    width: 100%;
+  }
+  .glossary{
+    flex-direction: column;
+  }
+  .glossary>*{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3px;
+    border-top: 1px solid #333;
+  }
+  a:hover{
+    background-color: #999;
+  }
+  .container{
+    max-width: 80vw;
+    min-width: 200px;
+    width: 80vw;
+  }
+  .country-details{
+    flex-direction: column;
+  }
+  .detail {
+    flex-direction: row;
+    border-radius: 0;
+  }
+  .detail p {
+    background-color: transparent;
+    font-weight: 400;
+    border: none;
+  }
+  hr {
+    display: none;
+  }
 }

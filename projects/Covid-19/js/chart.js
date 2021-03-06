@@ -34,13 +34,21 @@ function barChart(element,data){
                     ticks: {
                         beginAtZero: false,
                         fontColor: 'white', 
+                    },
+                    gridLines: {
+                        color: "rgba(0, 0, 0, 0)",
+                        zeroLineColor: 'white'
                     }
                 }],
                 xAxes: [{
                     ticks: {
                         beginAtZero: false,
                         fontColor: 'white', 
-                    }
+                    },
+                    gridLines: {
+                        color: "rgba(0, 0, 0, 0)",
+                        zeroLineColor: 'white'
+                    } 
                 }]
             }
         }
