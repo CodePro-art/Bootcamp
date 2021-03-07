@@ -1,7 +1,7 @@
 // ======================= PATHs for API request ===================== //
 
 let path1 = "https://corona-api.com/countries";
-let proxy = `https://api.allorigins.win/raw?url=`;
+let proxy = `https://api.codetabs.com/v1/proxy?quest=https://restcountries.herokuapp.com/api/v1`;
 let path2 = `${proxy}https://restcountries.herokuapp.com/api/v1`;
 
 // ======================= Global selectors ========================== //
