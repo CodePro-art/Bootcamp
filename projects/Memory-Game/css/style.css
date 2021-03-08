@@ -1,6 +1,4 @@
-/*----------------------------------  
-Global Styles
-------------------------------------*/
+/* Global Styles */
 * {
 	margin: 0;
 	padding: 0;
@@ -57,10 +55,6 @@ ul > li {
 	padding: 0.8em;
 }
 
-/*----------------------------------  
-Header
-------------------------------------*/
-
 h1 {
 	font-size: 3em;
 	font-weight: 400;
@@ -74,10 +68,6 @@ h2 {
 p {
 	font-size: 1.6em;
 }
-
-/*----------------------------------  
-Section - Score Panel
-------------------------------------*/
 
 .score-panel {
 	font-size: 1.4em;
@@ -113,13 +103,8 @@ Section - Score Panel
 	font-size: 1em;
 }
 
-/*----------------------------------  
-Section - Modal
-------------------------------------*/
-
-/* Modal (background) */
+/* modal hidden by default */
 .modal {
-	/*Hidden by default */
 	display: none;
 	position: fixed;
 	z-index: 99;
@@ -130,7 +115,6 @@ Section - Modal
 	background-color: rgba(46, 61, 73, 0.6);
 }
 
-/* Modal Content/Box */
 .modal-content {
 	display: flex;
 	flex-direction: column;
@@ -177,10 +161,8 @@ p.stats:last-child {
 	margin-bottom: 1em;
 }
 
-/*----------------------------------  
-Deck of Cards
-------------------------------------*/
-
+ 
+/* Deck of Cards */
 .deck {
 	background: linear-gradient(to bottom, #ccc, #666);
 	background: rgba(255,255,255,.3);
@@ -254,9 +236,7 @@ img {
 	}
 }
 
-/*---------------------------------- 
-Media Queries
-------------------------------------*/
+/* Media Queries */
 
 /*--Tablets-------------------------*/
 @media screen and (min-width: 550px) {
@@ -285,9 +265,7 @@ Media Queries
 	}
 }
 
-/*---------------------------------- 
-Desktops
-------------------------------------*/
+/*------ Desktops--------------------*/
 @media screen and (min-width: 800px) {
 	
 	h1 {
@@ -324,7 +302,6 @@ Desktops
 		font-size: 5em;
 	}
 
-	/* Modal Image*/
 	.modal-img {
 		width: 30em;
 	}

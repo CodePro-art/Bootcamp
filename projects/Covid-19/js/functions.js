@@ -4,12 +4,12 @@
 
 // function to find a specific country in covid list
 async function getCountry (path, code){
-  let country  = await get(path + `/${code}`);
+  let country  = await getAPI(path + `/${code}`);
   return country;
 }
 
 // function to fetch info from API
-async function get(endpoint){
+async function getAPI(endpoint){
   try{
     const promise = await fetch(endpoint);
     return await promise.json();
@@ -19,10 +19,10 @@ async function get(endpoint){
 }
 
 // function to devide the list into continents
-async function filter(continent,path){
+async function DevideByContinent(continent,path){
   let array = [];
   for(let i = 0 ; i<continent.length; i++){
-    let country = await get(path + `/region/${continent[i]}`);
+    let country = await getAPI(path + `/region/${continent[i]}`);
     array.push(country);
   }
   return array;
@@ -47,7 +47,7 @@ async function updateWorld (arr,path){
 }
 
 // fuction to insert data into array by required stat
-function toArray (arr,stat){
+function DataToArray (arr,stat){
   let array = [];
   arr.forEach(element => {
     array.push(element.get(stat));

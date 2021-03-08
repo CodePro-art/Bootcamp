@@ -1,7 +1,7 @@
 // function to display in chart -> CONTINENT info
 function barChart(element,data){
     const ctx = document.getElementById('chart').getContext('2d');
-    let lables = toArray(element.list,"name").map(e => abriviate(e));
+    let lables = dataToArray(element.list,"name").map(e => abriviate(e));
     const myChart = new Chart(ctx, {
         type: 'line',
         data: {

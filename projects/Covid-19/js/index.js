@@ -29,7 +29,7 @@ buttons.forEach((e) => {
     let target = world.names.indexOf(e.id);
     current = target === -1 ? world : world.list[target];
     changeDropDown(current);
-    displayNew(chart, canvasWrapper, current, toArray(current.list,stat));
+    displayNew(chart, canvasWrapper, current, dataToArray(current.list,stat));
   })
 });
 
@@ -65,10 +65,10 @@ document.getElementById('my-select').addEventListener('change', function() {
 // ======================= First Function on the page ========================== //
 
 async function initPage(){
-  let arr = await filter(world.names,path2);
+  let arr = await DevideByContinent(world.names,path2);
   await updateWorld(arr,path1);
   loader.setAttribute("style","display: none;");
-  barChart(current,toArray(current.list, stat));
+  barChart(current,dataToArray(current.list, stat));
   enable(buttons);
   document.getElementById('my-select').disabled =false;
 }
