@@ -1,13 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Indie+Flower);
 
 .paper {
-  position: absolute;
+  position: relative;
   height: 550px;
   width: 500px;
   background: rgba(255,255,255,0.9);
-  margin: -275px -225px;
-  left: 50%;
-  top: 45%;
   box-shadow: 0px 0px 5px 0px #888;
 }
 .paper::before {
@@ -45,11 +42,11 @@
   box-shadow: inset 0px 0px 2px 0px #888;
 }
 .hole-top {
-  top: 10%;
+  top: 120px;
 }
 .hole-middle {
-  top: 50%;
+  top: 280px;
 }
 .hole-bottom {
-  bottom: 10%;
+  top: 440px;
 }

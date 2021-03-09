@@ -23,8 +23,11 @@ input.addEventListener("keyup", (event) => {
 // DELETE-ICON: erase all tasks from list
 deleteAll.addEventListener("click", () => {
   if (confirm(`Are you sure you want to delete all tasks?`)) {
+    todo.eraseList();
+    console.log(todo);
     display.innerHTML = "";
-    displayDone.innerHTML = "";
+
+    adjustPaperHight("reset");
   } 
 });
 
