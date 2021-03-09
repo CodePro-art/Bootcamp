@@ -1,21 +1,34 @@
 class Task {
   // constructor for new task
   constructor(_id,_content){
+    console.log(_id);
     this.id = _id;
     this.content = _content;
     this.pending = true;
   }
 
-  // function to update/edit the task content
-  edit(_content){
-    this.content = _content;
-  }
-
   // Append task into the html
   append(){
     let listItem = document.createElement("li");
-    listItem.className = "create";
-    listItem.innerHTML = `<span class="task" contenteditable spellcheck="false">${this.content}</span>`;
+    listItem.className = "task";
+    listItem.innerHTML = `<input type="checkbox" class="checkbox" id="${this.id}" name="task-${this.id}" value="${this.content}"></input>`;
+    listItem.innerHTML += `<input class="task" value="${this.content}" maxlength="40" size="50"></input>`;
+    
+    listItem.addEventListener("click", () => {
+      // update upon Enter key press
+      listItem.lastElementChild.addEventListener("keyup", (event) => {
+        if (event.keyCode === 13){
+          this.content = listItem.lastElementChild.value;
+          listItem.lastElementChild.blur();
+        }
+      });
+
+      // update upon blur
+      listItem.lastElementChild.addEventListener("blur", () => {
+        this.content = listItem.lastElementChild.value;
+      });
+     
+    });
     display.appendChild(listItem);
     input.value = "";
   }
@@ -23,7 +36,7 @@ class Task {
 
 class Todo {
 
-  static id = 0;
+  static id = 1;
 
   // Construct an empty list
   constructor(){
@@ -34,7 +47,7 @@ class Todo {
   newTask(){
     let listItem = document.createElement("li");
     listItem.appendChild(document.createTextNode(input.value));
-    let task = new Task(Task.id++,listItem.textContent);
+    let task = new Task(Todo.id++,listItem.textContent);
     this.list.push(task);
     task.append();
     return task;
