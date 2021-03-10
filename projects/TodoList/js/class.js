@@ -6,33 +6,45 @@ class Task {
   constructor(_id,_content){
     this.id = _id;
     this.content = _content;
+    this.importance;
     this.pending = true;
   }
+
+  // create list item
+  createListItem(){
+    
+    let li = document.createElement("li");
+    li.className = "task";
+
+    // create task line: checkbox | text | trash
+    li.innerHTML = `<i class="fa fa-square-o check-${this.id}" aria-hidden="true"></i>`;
+    li.innerHTML += `<input id="task-${this.id}" class="task" value="${this.content}" maxlength="40" size="50"></input>`;
+    li.innerHTML += `<i id="delete-icon-${this.id}" class="far fa-trash-alt small">`;
+
+    // get rid of input's content
+    input.value = "";
+
+    // append the list item
+    display.appendChild(li);
+    return li;
+  }
+
 
   // Append task into the html
   append(){
 
     // create list item
-    let listItem = document.createElement("li");
-    listItem.className = "task";
+    let listItem = this.createListItem();
 
-    // create task line
-    listItem.innerHTML = `<i class="fa fa-square-o check-${this.id}" aria-hidden="true"></i>`;
-    listItem.innerHTML += `<input id="task-${this.id}" class="task" value="${this.content}" maxlength="40" size="50"></input>`;
-    listItem.innerHTML += `<i id="delete-icon-${this.id}" class="far fa-trash-alt small">`;
-
-    // append the list item
-    display.appendChild(listItem);
+    // adjuct paper height 
     adjustPaperHight("add");
-    // get rid of input's content
-    input.value = "";
 
     // select the specific task | checkbox | trash-icon
     let task = document.querySelector(`#task-${this.id}`);
     let checkbox = document.querySelector(`.check-${this.id}`);
     let trash = document.querySelector(`#delete-icon-${this.id}`);
 
-    // define event listener to the task
+    // Upon click enable editing: enter| blur to confirm change
     listItem.addEventListener("click", () => {
 
       // update upon Enter key press

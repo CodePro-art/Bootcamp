@@ -5,6 +5,7 @@
 // Define Global variables:
 const display = document.getElementById("display");
 const paper = document.querySelector('.paper');
+let storage;
 
 // function to adjust paper size to the list. min-hight = 550px
 function adjustPaperHight(action){
@@ -18,5 +19,6 @@ function adjustPaperHight(action){
 
 // Create to do list
 const todo = new Todo();
+
 
 

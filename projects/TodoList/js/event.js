@@ -30,6 +30,3 @@ deleteAll.addEventListener("click", () => {
     adjustPaperHight("reset");
   } 
 });
-
-
-
