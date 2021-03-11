@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* GENERAL STYLING */
+body {
+  display: flex;
+  justify-content: center;
+  font-family: 'Josefin Slab', serif;
+}
+
+/* TABLE */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  background-color: rgba(235,235,235,0.7);
+  border-radius: 5px;
+  border: 1px solid #999;
+  
+}
+
+h3{  
+  border-radius: 5px;
+}
+
+th {
+  background-color: #999;
+  padding: 5px;
+  border-radius: 5px;
+}
+tr {
+  text-align: center;
+  font-size: 14px;
+}
+
+
