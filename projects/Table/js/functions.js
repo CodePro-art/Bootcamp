@@ -70,29 +70,32 @@ function createPageLayout(){
 // ------------------------- Create Table --------------------------------- //
 function createTable(){
   const container = document.querySelector('.container');
-  const table = document.createElement("table");
+  const table = document.createElement('table');
+  const thead = document.createElement('thead');
+  const tbody = document.createElement('tbody');
+  
   table.className = "table";
-  table.innerHTML = `
-  <thead>
+  thead.innerHTML = `
     <tr>
       <th>ID</th>
-      <th>FN</th>
-      <th>LN</th>
+      <th>First Name</th>
+      <th>Last Name</th>
       <th>Capsule</th>
       <th>Age</th>
       <th>City</th>
       <th>Gender</th>
       <th>Hobby</th>
       <th data-sortable="false">Actions</th>
-    </tr>
-  </thead>`;
+    </tr>`;
+  table.appendChild(thead);
+  table.appendChild(tbody);
   container.appendChild(table);
 }
 
 // ------------------------- Add row to Table ------------------------------ //
 function addRow(member){
-  const table = document.querySelector('.table');
-  const row = document.createElement("tbody");
+  const tbody = document.querySelector("tbody");
+  const row = document.createElement("tr");
   row.innerHTML = `
   <tr>
     <td>${member.id}</td>
@@ -105,13 +108,12 @@ function addRow(member){
     <td>${member.hobby}</td>
     <td>
       <div class="btn-group btn-group-sm" role="group">
-        <button type="button" class="btn btn-outline-dark"><i class="fas fa-eye"></i></button>
-        <button type="button" class="btn btn-outline-dark"><i class="fas fa-pen"></i></button>
-        <button type="button" class="btn btn-outline-dark"><i class="fas fa-trash"></i></button>
+        <button type="button" class="btn"><i class="fas fa-pen"></i></button>
+        <button type="button" class="btn"><i class="fas fa-trash"></i></button>
       </div>
     </td>
   </tr>`;
-  table.appendChild(row);
+  tbody.appendChild(row);
 }
 
 // ------------------------- Add header to page ------------------------------ //
@@ -151,76 +153,68 @@ function updateResult(query) {
   })
 }
 
+// --------------------------- Get cell value -------------------------------- //
+const getCellValue = cell => cell.innerText || cell.textContent;
+
+// -------------------------- Compare cell value ----------------------------- //
+const compareValue = (valueOne, valueTwo) => {
+  return (
+    valueOne !== '' && valueTwo !== '' &&
+    !isNaN(valueOne) && !isNaN(valueTwo)
+  )
+    ? valueOne - valueTwo
+    : valueOne.toString().localeCompare(valueTwo.toString());
+}
+// -------------------------- Compare cell value ----------------------------- //
+const sort = (tBody, index, sortDirection) => {
+  const tbodyRows = [...tBody.rows];
+  
+  const sortedRows = tbodyRows.sort((a, b) => {
+    const aCellValue = getCellValue(a.cells[index]);
+    const bCellValue = getCellValue(b.cells[index]);
+    return sortDirection ? compareValue(aCellValue, bCellValue) : compareValue(bCellValue, aCellValue);
+  });
+
+  while(tBody.firstElementChild) {
+    tBody.removeChild(tBody.lastElementChild);
+  }
+  documentFragment.append(...sortedRows);
+  tBody.appendChild(documentFragment);
+}   
+
 // ------------------------------- Sort Table -------------------------------- //
-// const sortTable = (element, ascending = true) => {
-//   const documentFragment = new DocumentFragment();
-//   const [arrowUp, arrowDown, arrowUpDown] = ['\u2191', '\u2193', '\u21C5'];
-//   const { tHead, tBodies } = element;
-//   const [tBody] = tBodies;
-//   const theadCells = tHead.querySelectorAll('th:not([data-sortable="false"])');
-//   const tbodyRows = [...tBody.rows];
+const sortTable = (element, ascending = true) => {
   
-//   const getCellValue = cell => {
-//     return cell.innerText || cell.textContent;
-//   }
-
-//   const compareValue = (valueOne, valueTwo) => {
-//     return (
-//       valueOne !== '' &&
-//       valueTwo !== '' &&
-//       !isNaN(valueOne) &&
-//       !isNaN(valueTwo)
-//     )
-//       ? valueOne - valueTwo
-//       : valueOne.toString().localeCompare(valueTwo.toString());
-//   }
+  const [arrowUp, arrowDown, arrowUpDown] = ['\u2191', '\u2193', '\u21C5'];
+  const { tHead, tBodies } = element;
+  const [tBody] = tBodies; // tBodies[0]
+  const theadCells = tHead.querySelectorAll('th:not([data-sortable="false"])'); // select: 8 th's: id,fn,ln,capsule..
+ 
   
-//   const sort = (index, sortDirection) => {
-//     const sortedRows = tbodyRows.sort((a, b) => {
-//       const aCellValue = getCellValue(a.cells[index]);
-//       const bCellValue = getCellValue(b.cells[index]);
-
-//       return sortDirection
-//         ? compareValue(aCellValue, bCellValue)
-//         : compareValue(bCellValue, aCellValue);
-//     });
-
-//     while(tBody.firstElementChild) {
-//       tBody.removeChild(tBody.lastElementChild);
-//     }
-
-//     documentFragment.append(...sortedRows);
-//     tBody.appendChild(documentFragment);
-//   }
+  if (!element.classList.contains('table-sortable')) {
+    element.classList.add('table-sortable');
+  }
   
-//   if (!element.classList.contains('table-sortable')) {
-//     element.classList.add('table-sortable');
-//   }
-
-//   theadCells.forEach((theadCell, index) => {
-//     let isAscending = !ascending;
+  theadCells.forEach((theadCell, index) => {
+    let isAscending = !ascending;
     
-//     theadCell.dataset.sortDirection = arrowUpDown;
+    theadCell.dataset.sortDirection = arrowUpDown;
     
-//     theadCell.addEventListener('click', e => {
-//       theadCells.forEach(cell => {
-//         if (cell.dataset.sortDirection !== arrowUpDown) {
-//           cell.dataset.sortDirection = arrowUpDown;
-//         }
-//       });
+    theadCell.addEventListener('click', e => {
+      theadCells.forEach(cell => {
+        if (cell.dataset.sortDirection !== arrowUpDown) {
+          cell.dataset.sortDirection = arrowUpDown;
+        }
+      });
       
-//       e.target.dataset.sortDirection = isAscending
-//         ? arrowUp
-//         : arrowDown;
-      
-//       sort(index, isAscending);
-//       isAscending = !isAscending;
-//     });
-//   });
+      e.target.dataset.sortDirection = isAscending ? arrowUp : arrowDown;
+     
+      sort(tBody, index, isAscending);
+      isAscending = !isAscending;
+    });
+  });
   
-//   // Sort the first column/cell by default
-//   theadCells[0].dataset.sortDirection = ascending
-//     ? arrowUp
-//     : arrowDown;
-//   sort(0, ascending);
-// }
+  // Sort the first column/cell by default
+  theadCells[0].dataset.sortDirection = ascending ? arrowUp : arrowDown;
+  sort(tBody, 0, ascending);
+}

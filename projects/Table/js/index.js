@@ -7,6 +7,7 @@ let path = "https://appleseed-wa.herokuapp.com/api/users/";
 
 // -------------------- Create Appleseed instance ------------------------ //
 let appleseed = new Appleseed();
+const documentFragment = new DocumentFragment();
 
 // ------------------------- Initialze Page ------------------------------ //
 async function initPage(){
@@ -17,7 +18,9 @@ async function initPage(){
   
   // Create page layout + table
   createPageLayout();
-  
+
+  const table = document.querySelector('table');
+  sortTable(table, false);
 }
 
 

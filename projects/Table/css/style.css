@@ -40,9 +40,14 @@ h3{
   color: rgb(31, 173, 238);
 }
 
+td {
+  border-bottom: 1px dotted #ccc; 
+}
+
 th {
-  background-color: rgba(171, 170, 248, 0.3);
+  background-color: rgba(171, 170, 248, 0.2);
   color: #000;
+  font-size: 12px;
   padding: 5px;
   border-radius: 5px;
   cursor: pointer;
@@ -64,3 +69,28 @@ input,select {
   border-radius: 2px;
 }
 
+.table-sortable th:not([data-sortable="false"]) {
+  cursor: pointer;
+}
+
+.table-sortable th:not([data-sortable="false"])::after {
+  content: " " attr(data-sort-direction);
+}
+
+.table-sortable th[data-sortable="false"] {
+  background-color: lightcoral;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  outline: 0;
+}
+
+.fa-pen {
+  color: #333;
+}
+
+.fa-trash {
+  color: rgb(51, 0, 0);
+}
