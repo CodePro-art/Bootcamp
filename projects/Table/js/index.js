@@ -5,31 +5,22 @@
 // ----------------------- PATHs for API request ------------------------- //
 let path = "https://appleseed-wa.herokuapp.com/api/users/";
 
-// -------------------------- Define Selectors --------------------------- //
-const table = document.querySelector('.table');
-
 // -------------------- Create Appleseed instance ------------------------ //
-const appleseed = new Appleseed();
+let appleseed = new Appleseed();
 
 // ------------------------- Initialze Page ------------------------------ //
 async function initPage(){
-
-  storage = loadData();
-
+  
   // appleseed <- data from: local-storage or API
-  storage ? await fetchAllData() : appleseed = storage;
+  storage = loadData();
+  storage ? appleseed = storage : await fetchAllData();
   
-  createTable();
+  // Create page layout + table
+  createPageLayout();
   
-  appleseed.list.forEach(member => {
-    addRow(member);
-  });
-  
-  // storage = JSON.stringify(storage);
-
 }
 
 
 
-
-sortTable(table, false);
+// storage = JSON.stringify(storage);
+// sortTable(table, false);
