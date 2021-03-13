@@ -24,4 +24,12 @@ class Appleseed {
     let member = new Member(main,secondary);
     this.list.push(member);
   }
+
+  indexOf(id){
+    for(let i = 0; i<this.list.length ;i++)
+      if (this.list[i].id === id)
+        return i;
+    
+    return -1;
+  }
 }

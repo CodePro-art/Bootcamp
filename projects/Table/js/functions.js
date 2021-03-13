@@ -58,13 +58,15 @@ function createPageLayout(){
 
   // Add header
   addHeader();
+
   // create table head
   createTable();
   
   // Add data to the table
-  appleseed.list.forEach(member => {
-    addRow(member);
-  });
+  updateTable();
+
+  // Add event listeners to buttons
+  updateAddEventListener();
 }
 
 // ------------------------- Create Table --------------------------------- //
@@ -93,7 +95,7 @@ function createTable(){
 }
 
 // ------------------------- Add row to Table ------------------------------ //
-function addRow(member){
+async function addRow(member){
   const tbody = document.querySelector("tbody");
   const row = document.createElement("tr");
   row.innerHTML = `
@@ -108,8 +110,8 @@ function addRow(member){
     <td>${member.hobby}</td>
     <td>
       <div class="btn-group btn-group-sm" role="group">
-        <button type="button" class="btn"><i class="fas fa-pen"></i></button>
-        <button type="button" class="btn"><i class="fas fa-trash"></i></button>
+        <button type="button" class="btn-edit"><i class="fas fa-pen"></i></button>
+        <button type="button" class="btn-trash"><i class="fas fa-trash"></i></button>
       </div>
     </td>
   </tr>`;
@@ -122,35 +124,31 @@ function addHeader(){
   const head = document.createElement("header");
   head.innerHTML = `
   <h3>Table</h3>
-      <section class="search-container">
-        <input oninput="updateResult(this.value)" type="search" placeholder="Search...">
-        <select name="category" id="category">
-          <option value="Search by" selected disabled hidden>Search by</option>
-          <option value="id">ID</option>
-          <option value="First Name">First Name</option>
-          <option value="Last Name">Last Name</option>
-          <option value="Capsule">Capsule</option>
-          <option value="Age">Age</option>
-          <option value="City">City</option>
-          <option value="Gender">Gender</option>
-          <option value="Hobby">Hobby</option>
-        </select>
-      </section>`;
+    <section class="search-container">
+      <input oninput="updateResult(this.value)" type="search" placeholder="Search...">
+      <select name="category" id="category">
+        <option value="Search by" selected disabled hidden>Search by</option>
+        <option value="id">ID</option>
+        <option value="First Name">First Name</option>
+        <option value="Last Name">Last Name</option>
+        <option value="Capsule">Capsule</option>
+        <option value="Age">Age</option>
+        <option value="City">City</option>
+        <option value="Gender">Gender</option>
+        <option value="Hobby">Hobby</option>
+      </select>
+    </section>`;
   container.appendChild(head);
 }
 
 // --------------------------- Update Results -------------------------------- //
-function updateResult(query) {
-  let table = document.querySelector(".table");
-  table.innerHTML = "";
-
-  arr.map(function(algo){
-    query.split(" ").map(function (word){
-      if(algo.toLowerCase().indexOf(word.toLowerCase()) != -1){
-        table.innerHTML += `<li class="list-group-item">${algo}</li>`;
-      }
-    })
-  })
+function updateTable() {
+  const tbody = document.querySelector("tbody");
+  tbody.innerHTML = "";
+  // Add data to the table
+  appleseed.list.forEach(member => {
+    addRow(member);
+  });
 }
 
 // --------------------------- Get cell value -------------------------------- //

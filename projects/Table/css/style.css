@@ -20,9 +20,10 @@ body {
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
-  background-color: rgba(174, 215, 243, 0.5);
+  background-color: rgba(174, 215, 243, 0.3);
   border-radius: 5px;
-  border: 1px solid #999;
+  border: 1px solid rgba(112, 255, 255, 0.76);
+  box-shadow: 0 0 5px #000;
 }
 header {
   display: flex;
@@ -51,7 +52,11 @@ th {
   padding: 5px;
   border-radius: 5px;
   cursor: pointer;
-  border: 1px solid #fff;
+  border: 1px solid rgb(54, 255, 228);
+}
+th:hover {
+  background-color: rgba(91, 181, 255, 0.5);
+  
 }
 
 tr {
@@ -87,10 +92,14 @@ button {
   outline: 0;
 }
 
-.fa-pen {
+.fa-pen,.fa-trash {
   color: #333;
 }
 
-.fa-trash {
-  color: rgb(51, 0, 0);
+.fa-pen:hover {
+  color: rgba(0, 255, 179, 0.8);
+}
+
+.fa-trash:hover {
+  color: rgba(255, 0, 0, 0.8);
 }

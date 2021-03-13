@@ -11,7 +11,7 @@ const documentFragment = new DocumentFragment();
 
 // ------------------------- Initialze Page ------------------------------ //
 async function initPage(){
-  
+
   // appleseed <- data from: local-storage or API
   storage = loadData();
   storage ? appleseed = storage : await fetchAllData();
@@ -19,11 +19,13 @@ async function initPage(){
   // Create page layout + table
   createPageLayout();
 
+  // Add sortable option to the table
   const table = document.querySelector('table');
   sortTable(table, false);
+
 }
 
 
 
 // storage = JSON.stringify(storage);
-// sortTable(table, false);
+
