@@ -93,7 +93,6 @@ async function getApi () {
         <td>${el.planet.population}</td>
       </tr>`;
   });
-  
 }
 
 document.body.appendChild(table);

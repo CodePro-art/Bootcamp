@@ -19,14 +19,11 @@ function createTable(){
   body.appendChild(table);
 }
 
-async function getAPI(endpoint) {
-  try {
-    let x = await fetch(endpoint);
-    let y = await x.text();
-    console.log(y);
-  }
-  catch(err) {
+async function getAPI(endpoint){
+  try{
+    const promise = await fetch(endpoint);
+    return await promise.json();
+  }catch(err){
     console.log(err);
   }
-
 }

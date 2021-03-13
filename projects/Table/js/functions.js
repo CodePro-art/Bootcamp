@@ -65,8 +65,10 @@ function createPageLayout(){
   // Add data to the table
   updateTable();
 
-  // Add event listeners to buttons
-  updateAddEventListener();
+  // update event listeners
+  updateEventListener("edit");
+  updateEventListener("trash");
+
 }
 
 // ------------------------- Create Table --------------------------------- //
@@ -99,7 +101,7 @@ async function addRow(member){
   const tbody = document.querySelector("tbody");
   const row = document.createElement("tr");
   row.innerHTML = `
-  <tr>
+  <tr class="row-${member.id}">
     <td>${member.id}</td>
     <td>${member.firstName}</td>
     <td>${member.lastName}</td>
@@ -129,13 +131,13 @@ function addHeader(){
       <select name="category" id="category">
         <option value="Search by" selected disabled hidden>Search by</option>
         <option value="id">ID</option>
-        <option value="First Name">First Name</option>
-        <option value="Last Name">Last Name</option>
-        <option value="Capsule">Capsule</option>
-        <option value="Age">Age</option>
-        <option value="City">City</option>
-        <option value="Gender">Gender</option>
-        <option value="Hobby">Hobby</option>
+        <option value="firstName">First Name</option>
+        <option value="lastName">Last Name</option>
+        <option value="capsule">Capsule</option>
+        <option value="age">Age</option>
+        <option value="city">City</option>
+        <option value="gender">Gender</option>
+        <option value="hobby">Hobby</option>
       </select>
     </section>`;
   container.appendChild(head);
@@ -185,7 +187,7 @@ const sortTable = (element, ascending = true) => {
   
   const [arrowUp, arrowDown, arrowUpDown] = ['\u2191', '\u2193', '\u21C5'];
   const { tHead, tBodies } = element;
-  const [tBody] = tBodies; // tBodies[0]
+  const [tBody] = tBodies; 
   const theadCells = tHead.querySelectorAll('th:not([data-sortable="false"])'); // select: 8 th's: id,fn,ln,capsule..
  
   
@@ -215,4 +217,68 @@ const sortTable = (element, ascending = true) => {
   // Sort the first column/cell by default
   theadCells[0].dataset.sortDirection = ascending ? arrowUp : arrowDown;
   sort(tBody, 0, ascending);
+}
+
+// -------------------- Find index of element ---------------------------- //
+function findIndexOf(id){
+  for(let i=0; i<appleseed.list.length;i++){
+    if(appleseed.list[i].id == id){
+      return i;
+    }
+  }
+  return -1;
+} 
+
+// ---------------------- Remove element ---------------------------------- //
+function removeElement(index){
+  appleseed.list.splice(index,1);
+  saveData();
+} 
+// ---------------------- disable other buttons ---------------------------- //
+function disableAllButtons(){
+  const buttons = document.querySelectorAll('button');
+  
+  buttons.forEach((btn)=>{
+    btn.disabled = true;
+  });
+  
+} 
+// ---------------------- disable other buttons ---------------------------- //
+function enableAllButtons(){
+  const buttons = document.querySelectorAll('button');
+  
+  buttons.forEach((btn)=>{
+    btn.disabled = false;
+  });
+} 
+
+// ------------------ confirm changes in element -------------------------- //
+function saveChanges(row,id){
+  let arr = Object.values(row.cells);
+  for(let i=0;i<arr.length;i++){
+    arr[i] = arr[i].innerHTML;
+  }
+  let index = findIndexOf(id);
+  appleseed.list[index].id = arr [0];
+  appleseed.list[index].firstName = arr [1];
+  appleseed.list[index].lastName = arr [2];
+  appleseed.list[index].capsule = arr [3];
+  appleseed.list[index].age = arr [4];
+  appleseed.list[index].city = arr [5];
+  appleseed.list[index].gender = arr [6];
+  appleseed.list[index].hobby = arr [7];
+  saveData();
+}
+
+// ----------------------------- search algorithm -------------------------- //
+
+function updateResult(query){ 
+  
+  let filtered =  appleseed.list.filter((item)=>item[category].toString().toLowerCase().includes(query.toLowerCase()));
+  const tbody = document.querySelector("tbody");
+  tbody.innerHTML = "";
+  // Add data to the table
+  filtered.forEach(member => {
+    addRow(member);
+  });
 }
