@@ -5,63 +5,56 @@
 
 ---
 
+In my project I fetch data about the bootcamp participants from an api. This proccess is done twice because the data is scattered:
+  * The first api gives the main data and the id's for the second fetch.
+  * The second fetch makes use of th id's from the first fetch.
 
+All the data is then stored into an array of objects (class named "Member").
 
-<!-- blockquote -->
+I use local storage to save the data after every major change: 
+* After fetching.
+* After editing the data.
+* After deleting of a row from the table.
 
->this is a quote
+The table has ascending/decending sorting mechanism. The user can apply the sorting by pressing on the relevant category.
 
-<!-- links -->
+The search bar contains a real time search algorithm that makes it easier to search for the wanted data from the table.
 
-[some text](http://www.github.com)
-
-[some text](http://www.github.com "title")
+---
 
 <!-- UL -->
+My project includes:
+* 1 html file:
+  * index.html
+* 2 css files:
+  * style.css
+  * responsive.css
+* 4 javascript files:
+  * class.js
+  * event.js
+  * functions.js
+  * index.js
 
-* item 1
-* item 2
-* item 3
-  * nested 1
-  * nested 2
-
-1. item 1
-1. item 2
-1. item 3
-
-<!-- inline code block -->
-
-`<p>his is a paragraph</p>`
-
+---
 <!-- images -->
 
-![markdoun logo](https://markdown-here.com/img/icon256.png)
+![GitHub Logo](/nerd.png)
 
-<!-- code blocks -->
-```bash
-npm install
-npm start
-```
-```javascript
-function add(num1,num2){
-  return num1+num2;
-}
-```
-```python
-def add(num1,num2)
-  return num1+num2
-```
+---
 <!-- Tables -->
+### CONTACT INFO
 
 | Name | Email                |
 | ---- | -------------------- |
-| Name | netazuz@gmail.com    |
-| Name | mazun@post.bgu.ac.il |
+| Netanel Mazuz | netazuz@gmail.com    |
 
-<!-- Tasklist -->
+---
 
-* [x] task 1
-* [x] task 2
-* [ ] task 3
+<!-- links -->
+
+[netlify](https://stupefied-bohr-7657be.netlify.app/)
+
+[github](https://github.com/CodePro-art/Capsules)
+
 
 

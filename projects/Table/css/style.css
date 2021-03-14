@@ -98,16 +98,36 @@ button {
 
 .fa-pen,.fa-trash {
   color: #333;
+  transition: .3s;
 }
 
 .fa-pen:hover {
-  color: rgba(0, 255, 179, 0.8);
+  color: rgba(0, 217, 255, 0.8);
+  text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
 }
 
 .fa-trash:hover {
   color: rgba(255, 0, 0, 0.8);
+  text-shadow: -1px 0 rgb(255, 208, 0), 0 1px rgb(255, 208, 0), 1px 0 rgb(255, 208, 0), 0 -1px rgb(255, 208, 0);
+}
+
+.fa-pen:active {
+  color: rgba(0, 162, 255, 0.8);
+}
+
+.fa-trash:active {
+  color: rgb(255, 166, 0);
+  text-shadow: -1px 0 rgba(255, 0, 0, 0.8), 0 1px rgba(255, 0, 0, 0.8), 1px 0 rgba(255, 0, 0, 0.8), 0 -1px rgba(255, 0, 0, 0.8);
 }
 
 .editable {
   color: aliceblue;   
+}
+
+.reset {
+  position: absolute;
+  background-color: transparent;
+  color: #fff;
+    text-shadow: -1px 0 rgba(255, 0, 0, 0.8), 0 1px rgba(255, 0, 0, 0.8), 1px 0 rgba(255, 0, 0, 0.8), 0 -1px rgba(255, 0, 0, 0.8);
+
 }

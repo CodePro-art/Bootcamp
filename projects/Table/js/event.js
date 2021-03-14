@@ -82,3 +82,10 @@ function optionSelect (){
   updateResult(search.value);
   });
 }
+
+let reset = document.querySelector('.reset');
+reset.addEventListener('click',()=>{
+  
+  localStorage.clear();
+  location.reload();
+});
