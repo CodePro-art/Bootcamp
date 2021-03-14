@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import Hello from './components/hello/hello'
+import Display from './components/basic/basic';
+import Boxes from './components/boxes/box1';
+import Quiz from './components/quiz/quiz';
+import Buttons from './components/buttons/buttons';
+import Cards from './components/cards/cards'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Click here!
-        </a>
-      </header>
+      <Hello></Hello>
+      <hr/>
+      <Display></Display>
+      <hr/>
+      <Boxes></Boxes>
+      <hr/>
+      <Quiz></Quiz>
+      <hr/>
+      <Buttons></Buttons>
+      <hr/>
+      <Cards></Cards>
+      <hr/>
     </div>
   );
 }
 
 export default App;
+
+// npx kill-port 3000
