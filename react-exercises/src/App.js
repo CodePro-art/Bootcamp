@@ -4,6 +4,7 @@ import Boxes from './components/boxes/box1';
 import Quiz from './components/quiz/quiz';
 import Buttons from './components/buttons/buttons';
 import Cards from './components/cards/cards'
+import ClassCards from './components/cards.class.component/cards'
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
       <Buttons></Buttons>
       <hr/>
       <Cards></Cards>
+      <hr/>
+      <ClassCards></ClassCards>
       <hr/>
     </div>
   );
