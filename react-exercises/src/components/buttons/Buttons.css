@@ -1,0 +1,14 @@
+/* buttons */
+.bold {
+  font-weight: bold;
+}
+
+.button-container {
+  height: 80px;
+  display: flex;
+  justify-content:space-evenly;
+}
+
+button {
+  margin-top: 20px;
+}

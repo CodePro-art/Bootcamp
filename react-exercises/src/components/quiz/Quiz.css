@@ -1,0 +1,7 @@
+/* Quiz */
+.quiz-container {
+  margin: 20px auto;
+  height: 300px;
+  width: 500px;
+  border: 2px solid black;
+}

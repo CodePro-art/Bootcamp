@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from './card'
+import './Card.css'
 export default function cards() {
   return (
     <div className="cards">

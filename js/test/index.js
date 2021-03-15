@@ -1,29 +1,7 @@
-const body = document.querySelector('body');
+f44();
 
-let endpoint = `https://appleseed-wa.herokuapp.com/api/users/`;
+var f44 = function() {
 
-function createTable(){
-  let arr = ["cell 1","cell 2","cell 3","cell 4"];
-  const table = document.createElement('table');
+console.log("f44");
 
-  for(let i=0;i<3;i++){
-    const tr = document.createElement('tr');
-    arr.forEach((content)=>{
-      const td = document.createElement('td');
-      td.innerHTML = content;
-      tr.appendChild(td);
-    })
-    table.appendChild(tr);
-  }
-  
-  body.appendChild(table);
-}
-
-async function getAPI(endpoint){
-  try{
-    const promise = await fetch(endpoint);
-    return await promise.json();
-  }catch(err){
-    console.log(err);
-  }
 }
