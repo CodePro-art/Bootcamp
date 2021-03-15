@@ -1,0 +1,15 @@
+.hide-seek-container{
+  margin: 20px auto;
+  height: 300px;
+  width: 300px;
+  border: 2px solid black;
+}
+
+.shy-box{
+  margin: 10px auto;
+  width: 200px;
+  height: 200px;
+  background-color: rgb(243, 243, 133);
+  border: 1px solid rgb(255, 145, 0);
+  box-shadow: 0 0 5px #aaa;
+}

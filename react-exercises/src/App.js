@@ -3,8 +3,10 @@ import Display from './components/basic/basic';
 import Boxes from './components/boxes/box1';
 import Quiz from './components/quiz/quiz';
 import Buttons from './components/buttons/buttons';
-import Cards from './components/cards/cards'
-import ClassCards from './components/cards.class.component/cards'
+import Cards from './components/cards/cards';
+import ClassCards from './components/cards.class.component/cards';
+import Increment from './components/increment/increment';
+import HideAndSeek from './components/hideAndseek/hideAndseek';
 
 function App() {
   return (
@@ -23,6 +25,9 @@ function App() {
       <hr/>
       <ClassCards></ClassCards>
       <hr/>
+      <Increment></Increment>
+      <hr/>
+      <HideAndSeek></HideAndSeek>
     </div>
   );
 }
