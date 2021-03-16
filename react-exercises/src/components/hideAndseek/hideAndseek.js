@@ -12,10 +12,13 @@ export default class hideAndseek extends Component {
   render() {
     
     return (
-      <div className="hide-seek-container">
-        <Button toggle={() => this.setState({visible: !this.state.visible})}/>
-        <Box visible={this.state.visible} />
+      <div className="hide-seek-wrapper">
+        <div className="hide-seek-container">
+          <Button toggle={() => this.setState({visible: !this.state.visible})}/>
+          <Box visible={this.state.visible} />
+        </div>
       </div>
+      
     )
   }
 }
