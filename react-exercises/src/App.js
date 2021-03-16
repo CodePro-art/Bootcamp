@@ -7,6 +7,8 @@ import Cards from './components/cards/cards';
 import ClassCards from './components/cards.class.component/cards';
 import Increment from './components/increment/increment';
 import HideAndSeek from './components/hideAndseek/hideAndseek';
+import FavoriteColor from './components/lifeCycle/favoriteColor';
+import './App.css';
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
       <Increment></Increment>
       <hr/>
       <HideAndSeek></HideAndSeek>
+      <hr/>
+      <FavoriteColor></FavoriteColor>
     </div>
   );
 }

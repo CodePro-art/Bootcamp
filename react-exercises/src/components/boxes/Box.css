@@ -1,5 +1,9 @@
 
 /* Boxes */
+.box-container{
+  padding: 16px 0px;
+  background-color: rgb(200, 152, 255);
+}
 .box1 {
   display: flex;
   justify-content: center;
@@ -8,6 +12,7 @@
   background-color: #0099ff;
   height: 500px;
   width: 500px;
+  border: 1px solid #000;
 }
 .box2 {
   display: flex;

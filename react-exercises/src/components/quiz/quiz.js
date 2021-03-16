@@ -7,9 +7,12 @@ import './Quiz.css'
 export default function quiz() {
   return (
     <div className="quiz-container">
-      <Title></Title>
-      <Q1></Q1>
-      <Q2></Q2>
+      <div className="quiz">
+        <Title></Title>
+        <Q1></Q1>
+        <Q2></Q2>
+      </div>
     </div>
+    
   )
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import './basic.css';
 
 const display = () => {
   const data = ["hello", "world"];
@@ -7,10 +8,10 @@ const display = () => {
   const number2 =6;
 
   return (
-    <div>
+    <div className="basic">
       <p>{data.join(' ')}</p>
       <p>{number1}+{number2}={number1+number2}</p>
-      <p>{string}</p>
+      <p>String length:{string.length}</p>
     </div>
   )
 }

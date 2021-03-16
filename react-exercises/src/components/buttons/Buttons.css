@@ -1,14 +1,23 @@
 /* buttons */
 .bold {
-  font-weight: bold;
+  font-weight: bolder;
+}
+
+.buttons-wrapper{
+  background-image: linear-gradient(to bottom right, rgb(0, 255, 85), rgb(0, 255, 191));
 }
 
 .button-container {
+  padding: 20px;
   height: 80px;
   display: flex;
   justify-content:space-evenly;
 }
 
 button {
-  margin-top: 20px;
+  padding: 5px;
+  margin: 10px;
+  background-color: rgb(156, 156, 156);
+  color: #fff;
 }
+

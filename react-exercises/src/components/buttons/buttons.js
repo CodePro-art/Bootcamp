@@ -4,9 +4,12 @@ import './Buttons.css'
 
 export default function buttons() {
   return (
-    <div className="button-container">
-      <Btn className="bold" value="important"></Btn>
-      <Btn value="not important"></Btn>
+    <div className="buttons-wrapper">
+      <div className="button-container">
+        <Btn className="bold" value="important"></Btn>
+        <Btn value="not important"></Btn>
+      </div>
     </div>
+    
   )
 }
