@@ -1,3 +1,23 @@
-.counter-container{
+.counter-wrapper{
   background-image: linear-gradient(to bottom right, rgb(0, 17, 255), rgb(80, 214, 255));
+  height: 150px;
+}
+
+
+.counter{
+  color: #fff;
+}
+
+.plus, .minus{
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  transition: .5s;
+  border: 2px solid #333;
+  outline: none;
+}
+
+.plus:hover, .minus:hover {
+  background-color: #333;
+  border: 2px solid #ccc;
 }

@@ -11,11 +11,14 @@ export default class increment extends Component {
   
   render() {
     return (
-      <div className="counter-container">
-        <PlusButton count={this.state.count} increaseCount={(count) => this.setState({count})}/>
-        <MinusButton count={this.state.count} decreaseCount={(count) => this.setState({count})}/>
-        <Counter count={this.state.count} />
+      <div className="counter-wrapper">
+        <div className="counter-container">
+          <PlusButton count={this.state.count} increaseCount={(count) => this.setState({count})}/>
+          <Counter count={this.state.count} />
+          <MinusButton count={this.state.count} decreaseCount={(count) => this.setState({count})}/>
+        </div>
       </div>
+      
     )
   }
 }
