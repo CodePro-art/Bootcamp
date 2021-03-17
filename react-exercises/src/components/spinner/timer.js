@@ -4,6 +4,7 @@ import Spinner from './spinner'
 export default class timer extends Component {
   state = {
     timer: null,
+    size: 10,
     current: 10,
     color: "black"
   }
@@ -12,10 +13,12 @@ export default class timer extends Component {
     this.setState({
       timer: setInterval(() => {
         this.setState({ current: this.state.current - 1 });
-      }, 1000)
+      }, 1000),
+      size: setInterval(() => {
+        this.setState({ size: this.state.size - 0.1 });
+      }, 100)
     })
   }
-
 
   componentDidUpdate(){
     if(!this.state.current){
@@ -24,9 +27,8 @@ export default class timer extends Component {
   }
 
 
-
   render() {
-    if(this.state.current === 0)
+    if(this.state.size === 0)
       return(
         <div className="loader-container">
         </div>
@@ -34,7 +36,7 @@ export default class timer extends Component {
     else
       return (
         <div className="loader-container">
-          <Spinner current={this.state.current} color={this.state.color}></Spinner>
+          <Spinner size={this.state.size} current={this.state.current} color={this.state.color}></Spinner>
         </div>
       )
   }
