@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Spinner from './spinner'
+import Spinner from './Spinner'
 
 export default class timer extends Component {
   state = {

@@ -1,6 +1,6 @@
 import React from 'react'
-import Title from './q2Title'
-import Input from './q2Input'
+import Title from './Q2Title'
+import Input from './Q2Input'
 
 export default function q2() {
   return (

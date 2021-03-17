@@ -1,5 +1,5 @@
 import React from 'react'
-import Box4 from './box4'
+import Box4 from './Box4'
 export default function box3() {
   return (
     <div className="box3">

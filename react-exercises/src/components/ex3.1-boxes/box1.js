@@ -1,5 +1,5 @@
 import React from 'react'
-import Box2 from './box2'
+import Box2 from './Box2'
 import './Box.css'
 
 export default function box1() {

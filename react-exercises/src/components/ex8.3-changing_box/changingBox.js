@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Shape from './alternateBox'
+import Shape from './AlternateBox'
 import './ChangingBox.css'
 
 export default class changingBox extends Component {

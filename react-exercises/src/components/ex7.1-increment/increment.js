@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import Counter from './counter';
-import PlusButton from './plus';
-import MinusButton from './minus';
-import './counter.css'
+import Counter from './Counter';
+import PlusButton from './Plus';
+import MinusButton from './Minus';
+import './Counter.css'
+
 export default class increment extends Component {
   constructor(props){
     super(props);

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import AnimatedBox from './boxAnimation'
+import AnimatedBox from './BoxAnimation'
 import './AnimatedBox.css'
 
 export default class boxes extends Component {

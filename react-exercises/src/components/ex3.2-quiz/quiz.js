@@ -1,7 +1,7 @@
 import React from 'react'
-import Title from './quizTitle'
-import Q1 from './q1'
-import Q2 from './q2'
+import Title from './QuizTitle'
+import Q1 from './Q1'
+import Q2 from './Q2'
 import './Quiz.css'
 
 export default function quiz() {

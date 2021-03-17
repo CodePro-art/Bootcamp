@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Box from './box';
-import Button from './button';
+import Box from './Box';
+import Button from './Button';
 import './HideAndSeek.css';
 
 export default class hideAndseek extends Component {
