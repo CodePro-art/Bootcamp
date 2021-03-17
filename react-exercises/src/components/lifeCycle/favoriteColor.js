@@ -1,23 +1,21 @@
 import React, { Component } from 'react'
+import './lifeCycle.css'
+import Text from './text'
 
 export default class favoriteColor extends Component {
   // constructor
-  state = {favoriteColor: "blue"}
+  state = {favoriteColor: "blue",text: "My"}
 
   // on mount change color to red 
   componentDidMount(){
-    setTimeout(() => this.setState({favoriteColor: "red"}), 1000);
+    setTimeout(() => this.setState({favoriteColor: "red",text: "The updated"}), 1000);
   }
 
-  // on update change color of text
-  componentDidUpdate(){
-    
-  }
 
   render() {
     return (
-      <div >
-        <h1>My favorite color is {this.state.favoriteColor}</h1>
+      <div className={this.state.favoriteColor}>
+        <Text text={this.state.text} fav={this.state.favoriteColor}></Text>
       </div>
     )
   }

@@ -1,0 +1,28 @@
+.animated-box-container{
+  background-image: linear-gradient(to bottom right, rgb(0, 255, 234), yellow);
+  height: 300px;
+}
+
+.animated-box{
+  border: 1px solid;
+  animation: enter 1s;
+}
+
+.blue-box{
+  background-image: linear-gradient(to bottom right, rgb(0, 17, 255), rgb(0, 255, 242));
+}
+.green-box{
+  background-image: linear-gradient(to bottom right, rgb(14, 187, 71), rgb(0, 255, 0));
+}
+.red-box{
+  background-image: linear-gradient(to bottom right, rgb(255, 0, 0), rgb(255, 166, 64));
+}
+
+@keyframes enter {
+  0% {
+    transform: translateX(-150px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}

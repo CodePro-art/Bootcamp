@@ -1,0 +1,9 @@
+.blue{
+  background-image: linear-gradient(to bottom right, rgb(0, 17, 255), rgb(80, 214, 255));
+}
+.red{
+  background-image: linear-gradient(to bottom right, rgb(255, 0, 0), rgb(243, 255, 80));
+}
+.favorite-text{
+  padding: 30px;
+}

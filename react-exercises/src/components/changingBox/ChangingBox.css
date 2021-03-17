@@ -1,0 +1,14 @@
+.alternate-box-container{
+  background-image: linear-gradient(to bottom right, rgb(119, 119, 119), rgb(255, 255, 255));
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.alternating-box{
+  transition: .3s;
+  height: 150px;
+  width: 150px;
+  border: 1px solid black;
+  box-shadow: 0 0 5px #000;
+}

@@ -8,6 +8,10 @@ import ClassCards from './components/cards.class.component/cards';
 import Increment from './components/increment/increment';
 import HideAndSeek from './components/hideAndseek/hideAndseek';
 import FavoriteColor from './components/lifeCycle/favoriteColor';
+import AnimatedBoxes from './components/boxAnimation/boxes';
+import ChangingBox from './components/changingBox/changingBox';
+import Timer from './components/spinner/timer';
+
 import './App.css';
 
 function App() {
@@ -32,6 +36,12 @@ function App() {
       <HideAndSeek></HideAndSeek>
       <hr/>
       <FavoriteColor></FavoriteColor>
+      <hr/>
+      <AnimatedBoxes></AnimatedBoxes>
+      <hr/>
+      <ChangingBox></ChangingBox>
+      <hr/>
+      <Timer></Timer>
     </div>
   );
 }
