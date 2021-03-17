@@ -17,31 +17,31 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Hello></Hello>
+      <Hello/>
       <hr/>
-      <Display></Display>
+      <Display/>
       <hr/>
-      <Boxes></Boxes>
+      <Boxes/>
       <hr/>
-      <Quiz></Quiz>
+      <Quiz/>
       <hr/>
-      <Buttons></Buttons>
+      <Buttons/>
       <hr/>
-      <Cards></Cards>
+      <Cards/>
       <hr/>
-      <ClassCards></ClassCards>
+      <ClassCards/>
       <hr/>
-      <Increment></Increment>
+      <Increment/>
       <hr/>
-      <HideAndSeek></HideAndSeek>
+      <HideAndSeek/>
       <hr/>
-      <FavoriteColor></FavoriteColor>
+      <FavoriteColor/>
       <hr/>
-      <AnimatedBoxes></AnimatedBoxes>
+      <AnimatedBoxes/>
       <hr/>
-      <ChangingBox></ChangingBox>
+      <ChangingBox/>
       <hr/>
-      <Timer></Timer>
+      <Timer/>
     </div>
   );
 }
