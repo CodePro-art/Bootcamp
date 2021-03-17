@@ -1,7 +1,7 @@
 import React from 'react';
-import './basic.css';
+import './Basic.css';
 
-const display = () => {
+const Basic = () => {
   const data = ["hello", "world"];
   const string = "I love React!";
   const number1 = 5;
@@ -16,4 +16,4 @@ const display = () => {
   )
 }
 
-export default display;
+export default Basic;

@@ -2,7 +2,7 @@
 /* Boxes */
 .box-container{
   padding: 16px 0px;
-  background-color: rgb(200, 152, 255);
+  background-image: linear-gradient(to bottom right, rgb(72, 61, 224), rgb(0, 255, 179));
 }
 .box1 {
   display: flex;
@@ -13,12 +13,14 @@
   height: 500px;
   width: 500px;
   border: 1px solid #000;
+  box-shadow: 0 0 10px #000;
 }
 .box2 {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #5abdff;
+  box-shadow: 0 0 10px #000;
   height: 450px;
   width: 450px;
 }
@@ -29,11 +31,13 @@
   flex-direction: column;
   justify-content:space-evenly;
   background-color: #7bcaff;
+  box-shadow: 0 0 10px #000;
   height: 400px;
   width: 400px;
 }
 .box4 {
   background-color: #c4e7ff;
+  box-shadow: 0 0 10px #000;
   height: 100px;
   width: 350px;
 }

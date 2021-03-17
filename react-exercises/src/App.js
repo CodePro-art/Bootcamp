@@ -1,5 +1,5 @@
-import Hello from './components/hello/hello'
-import Display from './components/basic/basic';
+import Hello from './components/ex1-hello/hello'
+import Display from './components/ex2-basic/Basic';
 import Boxes from './components/boxes/box1';
 import Quiz from './components/quiz/quiz';
 import Buttons from './components/buttons/buttons';
