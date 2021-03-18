@@ -11,6 +11,8 @@ import FavoriteColor from './components/ex8.1-life_cycle/FavoriteColor';
 import AnimatedBoxes from './components/ex8.2-box_animation/Boxes';
 import ChangingBox from './components/ex8.3-changing_box/ChangingBox';
 import Timer from './components/ex9.1-spinner/Timer';
+import ColorButtons from './components/ex11.1-child_to_father/ColorButtons';
+import CheckBox from './components/ex11.2-check_box/CheckBox';
 
 import './App.css';
 
@@ -42,6 +44,10 @@ function App() {
       <ChangingBox/>
       <hr/>
       <Timer/>
+      <hr/>
+      <ColorButtons/>
+      <hr/>
+      <CheckBox/>
     </div>
   );
 }

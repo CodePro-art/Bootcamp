@@ -1,0 +1,45 @@
+.buttons-container{
+  background: linear-gradient(165deg, rgb(255, 93, 53) 0%, rgb(245, 225, 49) 40%, rgb(28, 236, 174) 98%, rgb(7, 19, 53) 100%);
+}
+.note-color{
+  color: #fff;
+  text-shadow: 1px 1px 4px #000000;
+}
+.custom-button{
+  margin: 10px auto;
+  height: 30px;
+  width: 60px;
+  border-radius: 8px;
+  transition: .3s;
+  outline: 0;
+  color: #fff;
+  text-shadow: -1px 0 #999, 0 1px #999, 1px 0 #999, 0 -1px #999;
+}
+.custom-button:active{
+  font-size: 20px;
+}
+
+.custom-button:hover{
+  color: #fff;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.blue-btn {
+  border: 2px solid rgb(0, 0, 160);
+}
+.yellow-btn {
+  border: 2px solid rgb(163, 163, 0);
+}
+.red-btn {
+  border: 2px solid rgb(160, 0, 0);
+}
+.blue-btn:hover {
+  border: 2px solid rgb(93, 93, 255);
+}
+.yellow-btn:hover {
+  border: 2px solid rgb(255, 255, 130);
+}
+.red-btn:hover {
+  border: 2px solid rgb(255, 88, 88);
+}
+
