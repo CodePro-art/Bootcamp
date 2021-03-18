@@ -3,10 +3,26 @@
 .cards{
   display: flex;
   justify-content:space-evenly;
+  flex-direction: column;
   padding: 20px;
   background-image: linear-gradient(to bottom right, red, yellow);
 }
-
+.cards-class{
+  display: flex;
+  justify-content:space-evenly;
+  flex-direction: column;
+  padding: 20px;
+  background-image: linear-gradient(to bottom right, rgb(4, 0, 255), rgb(9, 255, 0));
+}
+.cards-container{
+  display: flex;
+  justify-content:space-evenly;
+}
+.cards-title{
+  color: #fff;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
 .card-container {
   overflow: hidden;
   border: 1px solid #000;

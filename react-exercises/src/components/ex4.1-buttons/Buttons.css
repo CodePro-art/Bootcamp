@@ -1,8 +1,24 @@
 /* buttons */
 .bold {
-  font-weight: bolder;
+  font-weight: 900;
+  border: 1px solid blue;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px;
+  background-image: linear-gradient(to bottom right, rgb(72, 61, 224), rgb(74, 219, 255));
+  box-shadow: 0 0 5px teal;
+  color: #fff;
 }
 
+.not-bold {
+  border: 1px solid blue;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px;
+  background-image: linear-gradient(to bottom right, rgb(72, 61, 224), rgb(74, 219, 255));
+  box-shadow: 0 0 5px teal;
+  color: #fff;
+}
 .buttons-wrapper{
   background-image: linear-gradient(to bottom right, rgb(0, 255, 85), rgb(0, 255, 191));
 }
@@ -12,12 +28,5 @@
   height: 80px;
   display: flex;
   justify-content:space-evenly;
-}
-
-button {
-  padding: 5px;
-  margin: 10px;
-  background-color: rgb(156, 156, 156);
-  color: #fff;
 }
 

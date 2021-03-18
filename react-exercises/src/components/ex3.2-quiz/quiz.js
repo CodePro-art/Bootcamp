@@ -4,7 +4,7 @@ import Q1 from './Q1'
 import Q2 from './Q2'
 import './Quiz.css'
 
-export default function quiz() {
+export default function Quiz() {
   return (
     <div className="quiz-container">
       <div className="quiz">

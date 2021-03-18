@@ -3,15 +3,16 @@
   height: 150px;
 }
 
-
 .counter{
   color: #fff;
+  margin: 20px;
 }
 
 .plus, .minus{
   border-radius: 50%;
-  height: 30px;
-  width: 30px;
+  font-size: 25px;
+  height: 40px;
+  width: 40px;
   transition: .5s;
   border: 2px solid #333;
   outline: none;
@@ -19,5 +20,11 @@
 
 .plus:hover, .minus:hover {
   background-color: #333;
+  color: #fff;
   border: 2px solid #ccc;
+}
+
+.plus:active, .minus:active {
+  background-color: teal;
+  box-shadow: 0 0 10px #fff;
 }

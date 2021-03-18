@@ -2,7 +2,7 @@ import React from 'react'
 import Box2 from './Box2'
 import './Box.css'
 
-export default function box1() {
+export default function Box1() {
   return (
     <div className="box-container">
       <div className="box1">

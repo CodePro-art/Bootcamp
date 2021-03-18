@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function q2Input() {
+export default function Q2Input() {
   return (
     <div>
       <input className="text-input" type="text"></input>

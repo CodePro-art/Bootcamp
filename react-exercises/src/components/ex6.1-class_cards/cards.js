@@ -4,11 +4,12 @@ import Card from './Card';
 export default class cards extends Component {
   render() {
     return (
-      <div>
-        <div className="cards">
-          <Card name="Eren Yeager" src="https://cdnb.artstation.com/p/assets/images/images/033/268/113/large/edmerc-d-mercadal-eren-v5.jpg?1609001111" decription="Branch: Survey Corps"></Card>
-          <Card name="Mikasa Ackerman" src="https://s4.anilist.co/file/anilistcdn/character/large/b40881-F3gr1PkreDvj.png" decription="Branch: Survey Corps"></Card>
-          <Card name="Armin Arlert" src="https://cdna.artstation.com/p/assets/images/images/029/429/060/large/sirius-dreamer-2020-08-15-11-50-02.jpg?1597514929" decription="Branch: Survey Corps"></Card>
+      <div className="cards-class">
+        <h1 className="cards-title">Cards: React Class Component</h1>
+        <div className="cards-container">
+          <Card name="Lugia" src="https://static.wikia.nocookie.net/mythical-and-legendary-pokemon/images/1/15/Lugia_by_aocom-daoe9wv.jpg/revision/latest?cb=20190303222357" decription="Type: Psychic/Flying"></Card>
+          <Card name="Mew " src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxxJJnASj1nHf-3L8qhE9gTMM6ipuftnwmJA&usqp=CAU" decription="Type: Psychic"></Card>
+          <Card name="Rayquaza" src="http://fc05.deviantart.net/fs70/f/2011/288/6/7/pokemon__rayquaza_by_mark331-d2x50dz.jpg" decription="Type: Dragon/Flying"></Card>
         </div>
       </div>
     )

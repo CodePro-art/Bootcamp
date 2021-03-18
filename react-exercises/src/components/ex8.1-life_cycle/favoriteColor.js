@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './lifeCycle.css'
+import './LifeCycle.css'
 import Text from './Text'
 
 export default class favoriteColor extends Component {

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function button(props) {
+export default function Button(props) {
   return (
     <div>
       <button className={props.className}>{props.value}</button>
