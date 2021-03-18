@@ -11,6 +11,7 @@
   align-items: flex-start;
   flex-direction: column;
   margin: 20px auto;
+  padding: 20px 10px;
   background-image: linear-gradient(to bottom right, rgb(2, 67, 187), rgb(13, 14, 83));
   border-top: 5px solid rgb(49, 49, 255);
   border-bottom: 5px solid rgb(0, 0, 50);
@@ -19,3 +20,4 @@
   box-shadow: 0 0 10px #333;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
+

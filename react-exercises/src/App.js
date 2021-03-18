@@ -13,6 +13,7 @@ import ChangingBox from './components/ex8.3-changing_box/ChangingBox';
 import Timer from './components/ex9.1-spinner/Timer';
 import ColorButtons from './components/ex11.1-child_to_father/ColorButtons';
 import CheckBox from './components/ex11.2-check_box/CheckBox';
+import FormReview from './components/ex11.3-form_review/FormReview';
 
 import './App.css';
 
@@ -48,6 +49,8 @@ function App() {
       <ColorButtons/>
       <hr/>
       <CheckBox/>
+      <hr/>
+      <FormReview/>
     </div>
   );
 }

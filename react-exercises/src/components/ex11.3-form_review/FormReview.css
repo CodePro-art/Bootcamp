@@ -1,0 +1,59 @@
+.form-review-container{
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(to bottom right, rgb(255, 0, 212), rgb(255, 0, 64));
+  color: aliceblue;
+  font-size: 20px;
+  font-family: cursive;
+}
+.text-area-container{
+  width: 100%;
+  text-align: left;
+}
+.review-form{
+  width: 300px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 30px auto;
+  padding: 20px 10px;
+  background-image: linear-gradient(to bottom right, rgb(255, 60, 0), rgb(255, 238, 0));
+  border: 2px solid rgb(117, 0, 0);
+  box-shadow: 0 0 10px #333;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.input-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.form-input{
+  width: 100%;
+  margin-top: 3px;
+  padding: 3px;
+  outline: 0;
+  border: none;
+  background-color: rgb(254, 255, 213);
+  box-shadow: 0 0 5px #333;
+}
+
+.btn{
+  height: 35px;
+  border: 1px solid red;
+  color: rgb(245, 64, 64);
+  font-size: 18px;
+  font-weight: bold;
+  background-color: rgb(247, 214, 106);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  transition: .3s;
+}
+
+.btn:hover{
+  font-size: 19px;
+  box-shadow: 0 0 5px rgb(255, 6, 6);
+  color: rgb(255, 248, 189);
+  background-color: rgb(253, 195, 4);
+  text-shadow: 2px 2px 3px #000;
+}
+
