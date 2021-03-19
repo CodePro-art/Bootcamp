@@ -3,12 +3,12 @@ import React, { Component } from 'react'
 export default class Input extends Component {
 
   callback=(event)=>{
+    console.log(event.target.value);
     this.props.sendInput(event.target.value,this.props.id)
   }
 
   renderCondition = () =>{
     if(this.props.type === "textArea"){
-      console.log("text area");
       return (
         <div className="text-area-container">
           <label htmlFor="free-text">{this.props.text}</label><br/>

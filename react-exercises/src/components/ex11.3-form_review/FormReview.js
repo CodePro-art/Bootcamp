@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { confirmAlert } from 'react-confirm-alert'; // Import
+import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
 import Input from './Input'
 import './FormReview.css'
 
@@ -14,7 +16,6 @@ export default class FormReview extends Component {
   
   updateFormInputs = (value,id) => {
     let arr = this.state.values;
-    console.log(value);
     switch(id){
       case "fname":
         arr[0]=value;
@@ -28,7 +29,7 @@ export default class FormReview extends Component {
       case "email":
         arr[3]=value;
         break;
-      case "text":
+      case "textarea":
         arr[4]=value;
         break;
       default:
@@ -38,7 +39,28 @@ export default class FormReview extends Component {
 
   submitHandler = (e) => {
     e.preventDefault();
-    window.confirm("Press a button!");
+    confirmAlert({
+      title: 'Confirm to submit',
+      message: `
+      First Name:        ${this.state.values[0]}
+      Last Name:         ${this.state.values[1]}
+      Age:                   ${this.state.values[2]}
+      E-mail:                ${this.state.values[3]}
+      About yourself:   ${this.state.values[4]}
+
+      Are you sure to do this.`,
+      buttons: [
+        {
+          label: 'Yes',
+          onClick: () => alert('Click Yes')
+        },
+        {
+          label: 'No',
+          onClick: () => alert('Click No')
+        }
+      ]
+    })
+
   }
 
   renderForm = () => this.state.types.map((type,i) => {
