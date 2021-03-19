@@ -11,6 +11,7 @@ export default class CheckBox extends Component {
       " I want to get the weekly news letter.",
       " I want to get sales and offers."
     ],
+    keys: ["one","two","three","four"],
     check: [false,false,true,true]
   }
 
@@ -23,6 +24,8 @@ export default class CheckBox extends Component {
   renderBullets = () => this.state.bullets.map((text,i) => {
     return(
       <Bullet 
+      key={this.state.keys[i]}
+      id={this.state.keys[i]}
       text={text} 
       sendCheck={this.updateCheckBox} 
       check={this.state.check[i]}

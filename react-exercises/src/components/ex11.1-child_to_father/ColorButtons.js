@@ -13,7 +13,7 @@ export default class ColorButtons extends Component {
     this.setState({selected: color})
   }
 
-  renderButtons = () => this.state.colors.map((color) => <Button sendColor={this.updateColor} color={color}></Button>)
+  renderButtons = () => this.state.colors.map((color,i) => <Button key={i.toString()} sendColor={this.updateColor} color={color}></Button>)
 
   render() {
     

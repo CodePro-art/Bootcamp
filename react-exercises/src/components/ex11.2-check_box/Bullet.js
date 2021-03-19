@@ -14,9 +14,9 @@ export default class Bullet extends Component {
         lable={this.props.text} 
         className="check-custom" 
         checked={this.props.check}
-        onClick={this.callback}
+        onChange={this.callback}
         />
-        <label for="">{this.props.text}</label>
+        <label >{this.props.text}</label>
       </div>
     )
   }

@@ -44,16 +44,18 @@
   color: rgb(245, 64, 64);
   font-size: 18px;
   font-weight: bold;
-  background-color: rgb(247, 214, 106);
+  background-color: rgb(253, 194, 0);
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   transition: .3s;
+  border-radius: 5px;
 }
 
 .btn:hover{
   font-size: 19px;
-  box-shadow: 0 0 5px rgb(255, 6, 6);
+  box-shadow: 0 0 10px rgb(255, 251, 6);
   color: rgb(255, 248, 189);
-  background-color: rgb(253, 195, 4);
-  text-shadow: 2px 2px 3px #000;
+  background-color: rgb(255, 209, 57);
+  border: 1px solid rgb(255, 253, 154);
+  text-shadow: 2px 2px 5px rgb(151, 0, 0);
 }
 
