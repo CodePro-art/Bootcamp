@@ -1,19 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import Card from './Card';
 import axios from 'axios';
 import './Chuck.css';
 
 // Retrieve a random chuck joke in JSON format.
-const path = `https://api.chucknorris.io/jokes/random`
-
-// Retrieve a random chuck norris joke from a given category.
-// const jokeFromCategory = `https://api.chucknorris.io/jokes/random?category={category}`
+const path = `https://api.chucknorris.io/jokes/random`;
 
 // Retrieve a list of available categories.
-const categoryList  = `https://api.chucknorris.io/jokes/categories`
-
-// Free text search.
-// const freeTextSearch = `https://api.chucknorris.io/jokes/search?query={query}`
+const categoryList  = `https://api.chucknorris.io/jokes/categories`;
 
 export default class ChuckNorris extends Component {
   state = {

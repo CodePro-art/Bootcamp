@@ -1,4 +1,31 @@
 .data-massaging-container{
   background-image: linear-gradient(to bottom right, rgb(188, 53, 251), rgb(80, 214, 255));
-  height: 300px;
+  height: 400px;
+}
+.name-container{
+  font-size: 20px;
+  font-family: cursive;
+  color: #fff;
+  text-shadow: 4px 3px 1px #555 ;
+}
+
+.elder-cards-container{
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.card-container.elder{
+  background-image: linear-gradient( rgb(233, 255, 32), rgb(255, 188, 80));
+  border-radius: 15px;
+}
+
+.sub-title{
+  color: rgb(255, 123, 0);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.elder-name{
+  color: #777;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
