@@ -1,11 +1,18 @@
 .jokes-container{
-  background-image: linear-gradient(to bottom right, rgb(0, 255, 234), yellow);
+  background-image: linear-gradient(to bottom right, rgb(0, 255, 234), rgb(220, 255, 61));
 	padding: 20px ;
   display: flex;
+	flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   height: auto;
+}
+.card-container.chucky{
+	height: 500px;
+}
+.detail-container-norris{
+	height: 100%;
 }
 
 .glass{
@@ -110,7 +117,7 @@
 	background-image: linear-gradient(gray,rgb(216, 216, 216));
 }
 .norris-header{
-	display: block;
+	margin: 20px;
 }
 .image-norris {
 	width: 100%;
@@ -118,5 +125,8 @@
   object-fit:cover;
 	box-shadow: 0 0 1px black;
 	background-color: white;
+}
+.chuck-name{
+	padding-bottom: 20px;
 }
 

@@ -15,7 +15,7 @@ import ColorButtons from './components/ex11.1-child_to_father/ColorButtons';
 import CheckBox from './components/ex11.2-check_box/CheckBox';
 import FormReview from './components/ex11.3-form_review/FormReview';
 import ChuckNorris from './components/ex12.1-chuck_norris/ChuckNorris';
-
+import DataMassaging from './components/ex13.1-data_massaging/DataMassaging';
 import './App.css';
 
 function App() {
@@ -54,6 +54,8 @@ function App() {
       <FormReview/>
       <hr/>
       <ChuckNorris/>
+      <hr/>
+      <DataMassaging/>
     </div>
   );
 }
