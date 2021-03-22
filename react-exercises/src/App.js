@@ -14,6 +14,7 @@ import Timer from './components/ex9.1-spinner/Timer';
 import ColorButtons from './components/ex11.1-child_to_father/ColorButtons';
 import CheckBox from './components/ex11.2-check_box/CheckBox';
 import FormReview from './components/ex11.3-form_review/FormReview';
+import ChuckNorris from './components/ex12.1-chuck_norris/ChuckNorris';
 
 import './App.css';
 
@@ -51,6 +52,8 @@ function App() {
       <CheckBox/>
       <hr/>
       <FormReview/>
+      <hr/>
+      <ChuckNorris/>
     </div>
   );
 }

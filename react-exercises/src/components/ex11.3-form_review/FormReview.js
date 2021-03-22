@@ -60,19 +60,18 @@ export default class FormReview extends Component {
         }
       ]
     })
-
   }
 
   renderForm = () => this.state.types.map((type,i) => {
     return(
       <Input 
-      key={this.state.ids[i]}
-      type={type}
-      text={this.state.text[i]} 
-      id={this.state.ids[i]}
-      placeholder={this.state.placeHolders[i]}
-      value={this.state.values[i]}
-      sendInput={this.updateFormInputs} 
+        key={this.state.ids[i]}
+        type={type}
+        text={this.state.text[i]} 
+        id={this.state.ids[i]}
+        placeholder={this.state.placeHolders[i]}
+        value={this.state.values[i]}
+        sendInput={this.updateFormInputs} 
       />
     )
   })
