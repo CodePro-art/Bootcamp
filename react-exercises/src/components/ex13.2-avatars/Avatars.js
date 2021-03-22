@@ -26,9 +26,7 @@ export default class Avaters extends Component {
   }
 
   updateState = (string) => {
-    console.log(string);
-    // console.log(this.state.people);
-    this.setState({people: list.filter(e => e.name.first.includes(string))})
+    this.setState({people: list.filter(e => e.name.first.toLowerCase().includes(string.toLowerCase()))})
   }
 
   extractInfo = arr => arr.map(e => {

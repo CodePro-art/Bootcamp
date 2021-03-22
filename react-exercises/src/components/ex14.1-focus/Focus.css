@@ -1,0 +1,20 @@
+.focus-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+  background-image: linear-gradient(to bottom right, rgb(0, 17, 255), rgb(80, 214, 255));
+}
+
+.search-focus{
+  outline: 0;  
+  height: 25px;
+  width: 500px;
+}
+
+.search-label{
+  height: 100%;
+  color: aliceblue;
+
+}
+

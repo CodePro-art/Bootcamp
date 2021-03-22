@@ -16,7 +16,10 @@ import CheckBox from './components/ex11.2-check_box/CheckBox';
 import FormReview from './components/ex11.3-form_review/FormReview';
 import ChuckNorris from './components/ex12.1-chuck_norris/ChuckNorris';
 import DataMassaging from './components/ex13.1-data_massaging/DataMassaging';
-import Avatars from './components/ex13.2-avatars/Avaters';
+import Avatars from './components/ex13.2-avatars/Avatars';
+import Focus from './components/ex14.1-focus/Focus';
+import Copy from './components/ex14.2-copy/Copy';
+
 import './App.css';
 
 function App() {
@@ -59,6 +62,10 @@ function App() {
       <DataMassaging/>
       <hr/>
       <Avatars/>
+      <hr/>
+      <Focus/>
+      <hr/>
+      <Copy/>
     </div>
   );
 }
