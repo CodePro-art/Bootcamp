@@ -1,7 +1,9 @@
 .router-container{
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  justify-items: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .router-nav{
@@ -28,5 +30,39 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+}
+
+.shop-item{
+  height: auto;
+}
+
+.item-image{
+  width: 100%;
+}
+
+.item-container{
+  margin: 20px auto;
+}
+
+.item-button{
+  margin-top: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  outline: none;
+  border: 3px solid rgb(0, 108, 112);
+  transition: 1s;
+}
+
+.item-button:hover{
+  background-color: red; /*for compatibility with older browsers*/
+	background-image: linear-gradient(rgb(255, 115, 0),orange);
+}
+
+.item-image{
+  box-shadow: 0 0 3px black;
+}
+
+.shop-title{
+  margin: 20px auto;
 }
 
