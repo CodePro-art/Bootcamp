@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Indie+Flower);
 .copy-cobtainer{
-  background-image: linear-gradient(to bottom right, rgb(224, 121, 61), rgb(195, 255, 0));
+  background: radial-gradient(#c5c5c5, #fff);
   height: auto;
   display: flex;
   flex-direction: column;
@@ -15,6 +15,7 @@
   display: flex;
   flex-direction: column;
   border: 1px solid black;
+  box-shadow: 5px 5px 3px #666;
   margin: 20px auto;
 }
 .meaning-title{

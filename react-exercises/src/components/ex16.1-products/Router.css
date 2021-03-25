@@ -1,0 +1,32 @@
+.router-container{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.router-nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+}
+
+.nav-links{
+  width: 100%;
+}
+
+.link li{
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-links ul {
+  list-style: none; 
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+

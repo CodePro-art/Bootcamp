@@ -19,7 +19,7 @@ import DataMassaging from './components/ex13.1-data_massaging/DataMassaging';
 import Avatars from './components/ex13.2-avatars/Avatars';
 import Focus from './components/ex14.1-focus/Focus';
 import Copy from './components/ex14.2-copy/Copy';
-
+import Router from './components/ex16.1-products/LandPage';
 import './App.css';
 
 function App() {
@@ -66,6 +66,8 @@ function App() {
       <Focus/>
       <hr/>
       <Copy/>
+      <hr/>
+      <Router/>
     </div>
   );
 }
