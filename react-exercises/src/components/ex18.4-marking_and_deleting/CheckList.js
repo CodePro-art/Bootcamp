@@ -20,11 +20,16 @@ export default function CheckList() {
     console.log(display);
   }
 
+  const reset = () => {
+    display = ["block","block","block","block","block"];
+    setStatus(display)
+  }
+
   return (
     <div className="checklist-container">
       <div className="box5">
         <div className="btn-container">
-          <button className="reset-btn glass animal" onClick={()=>{}}>RESET</button>
+          <button className="reset-btn glass animal" onClick={()=> reset}>RESET</button>
           <button className="delete-btn glass celebrity" onClick={()=>setStatus(display)}>DELETE</button>
         </div>
         <ul>
