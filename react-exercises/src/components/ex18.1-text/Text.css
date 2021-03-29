@@ -1,0 +1,21 @@
+.text-container{
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  background-image: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(245, 245, 245));
+}
+.p-content{
+  text-align: left;
+  background-color: #333;
+  color: #fff;
+  margin: 10px;
+  padding: 3px;
+  border-radius: 6px;
+}
+
+.read-more{
+  color: rgb(79, 170, 255);
+}
+.read-more:hover{
+  color: rgb(133, 196, 255);
+}
