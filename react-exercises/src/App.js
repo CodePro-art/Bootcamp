@@ -22,6 +22,7 @@ import Copy from './components/ex14.2-copy/Copy';
 import Router from './components/ex16.1-products/LandPage';
 import Text from './components/ex18.1-text/Text';
 import Todo from './components/ex18.2-simple_todo/TodoList';
+
 import './App.css';
 
 function App() {

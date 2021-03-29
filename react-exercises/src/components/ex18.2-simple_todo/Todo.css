@@ -1,0 +1,29 @@
+.todo-container{
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding: 20px;
+  background-image: linear-gradient(to bottom right, rgb(255, 235, 210), rgb(245, 245, 245));
+}
+
+.list-container{
+  text-align: start;
+  margin: 20px auto;
+  padding: 15px;
+  background-image: linear-gradient(to bottom right, wheat, rgb(238, 225, 201));
+  border: 2px solid rgb(172, 112, 0);
+  box-shadow: 0 0 3px rgb(255, 184, 52);
+  color: rgb(151, 98, 0);
+}
+.todo-task{
+  display: flex;
+  transition: .3s;
+  align-items: center;
+}
+.todo-task:hover{
+  color: rgb(116, 69, 0);
+}
+
+.todo-task >*{
+  padding: 3px 5px;
+}
