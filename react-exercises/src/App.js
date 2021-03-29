@@ -23,6 +23,7 @@ import Router from './components/ex16.1-products/LandPage';
 import Text from './components/ex18.1-text/Text';
 import Todo from './components/ex18.2-simple_todo/TodoList';
 import Time from './components/ex18.3-whats_the_time/Time';
+import CheckList from './components/ex18.4-marking_and_deleting/CheckList';
 import './App.css';
 
 function App() {
@@ -77,6 +78,8 @@ function App() {
       <Todo/>
       <hr/>
       <Time/>
+      <hr/>
+      <CheckList/>
     </div>
   );
 }
