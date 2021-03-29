@@ -22,7 +22,7 @@ import Copy from './components/ex14.2-copy/Copy';
 import Router from './components/ex16.1-products/LandPage';
 import Text from './components/ex18.1-text/Text';
 import Todo from './components/ex18.2-simple_todo/TodoList';
-
+import Time from './components/ex18.3-whats_the_time/Time';
 import './App.css';
 
 function App() {
@@ -75,6 +75,8 @@ function App() {
       <Text/>
       <hr/>
       <Todo/>
+      <hr/>
+      <Time/>
     </div>
   );
 }

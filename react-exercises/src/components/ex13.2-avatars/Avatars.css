@@ -17,7 +17,7 @@
   min-width:300px;
   width:300px;
   margin: 20px;
-  background: linear-gradient(165deg, rgb(255, 201, 53) 0%, rgb(225, 245, 49) 40%, rgb(28, 236, 174) 80%, rgb(144, 174, 255) 100%);
+  background: linear-gradient(165deg, rgb(92, 246, 187) 0%, rgb(103, 203, 243) 40%, rgb(146, 122, 255) 80%, rgb(234, 167, 255) 100%);
 }
 .card-container-avatar:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -49,7 +49,7 @@
 .avatar-name{
   margin-top: 10px;
   font-size: 20px;
-  color: rgb(221, 118, 0);
+  color: rgb(227, 255, 219);
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 .contact-info{
