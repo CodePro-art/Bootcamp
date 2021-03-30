@@ -15,7 +15,12 @@ export default function Time() {
   const updateTime = result => setTime(result);
 
   // render child component using "time" state info. default = ' '
-  const renderTime = (arr,time) => arr.map((e,i) => <TimeItem key={i.toString()} type={e} time={time*conv[i]} converter={conv.reverse()[i]} sendTime={updateTime}/>);
+  const renderTime = (arr,time) => arr.map((e,i) => <TimeItem 
+  key={i.toString()} 
+  type={e} 
+  time={time*conv[i]} 
+  converter={conv.reverse()[i]} 
+  sendTime={updateTime}/>);
   
   // Render!
   return (

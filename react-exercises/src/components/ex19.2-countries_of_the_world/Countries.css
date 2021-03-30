@@ -1,0 +1,9 @@
+.countries-container{
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding: 20px;
+  background-image: linear-gradient(to bottom right, rgb(238, 255, 0), rgb(2, 255, 36));
+  justify-content: center;
+  align-items: center;
+}

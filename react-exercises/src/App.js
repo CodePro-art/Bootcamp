@@ -24,6 +24,8 @@ import Text from './components/ex18.1-text/Text';
 import Todo from './components/ex18.2-simple_todo/TodoList';
 import Time from './components/ex18.3-whats_the_time/Time';
 import CheckList from './components/ex18.4-marking_and_deleting/CheckList';
+// import SimpleFetch from './components/ex19.1-simple_fetch/SimpleFetch';
+import Countries from './components/ex19.2-countries_of_the_world/Countries';
 import './App.css';
 
 function App() {
@@ -80,6 +82,10 @@ function App() {
       <Time/>
       <hr/>
       <CheckList/>
+      {/* <hr/>
+      <SimpleFetch/> */}
+      <hr/>
+      <Countries/>
     </div>
   );
 }
