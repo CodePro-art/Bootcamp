@@ -12,8 +12,8 @@ export default function Text() {
   
   return (
     <div className="text-container">
-      <h1>Text Manipulation:</h1>
-      <h3>Read More using Hooks</h3>
+      <h1>Text Manipulation:</h1><br/>
+      <h3>Read More using Hooks</h3><br/>
       <Content text={text} maxLength={100}/>
     </div>
   )

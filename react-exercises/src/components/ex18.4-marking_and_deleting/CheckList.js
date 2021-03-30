@@ -1,39 +1,43 @@
 import React, {useState} from 'react';
-import Item from './Item'
-import './CheckList.css'
+import Item from './Item';
+import {data} from './Data';
+import './CheckList.css';
 
 export default function CheckList() {
 
-  const checklist = ["one", "two", "three", "four", "five"];
-  let display = ["block","block","block","block","block"];
-  const [state,setStatus] = useState(display);
+  const [state,setStatus] = useState(data);
 
   // function to render each item in the checklist
-  const renderItems = arr => arr.map((e,i) => 
-    <i key={i.toString()} style={{display: state[i] }}>
-      <Item content={e} id={i} sendData={updateDisplay}/>
-    </i>);
-
-  const updateDisplay =(disp,index) =>{
-    console.log("in!");
-    display[index] = disp ? "block" : "none";
-    console.log(display);
-  }
+  const renderItems = arr => arr.map(e => 
+    <i key={e.id} onClick={()=>{updateState(e.id)}}>
+      <Item content={e.content} check={e.check}/>
+    </i>).filter((e)=> !e.check)
 
   const reset = () => {
-    display = ["block","block","block","block","block"];
-    setStatus(display)
+    setStatus(data);
+  }
+  
+  const reRender = () => {
+    let filtered = state.filter(e=> !e.check);
+    filtered.map((e,i) => e.id = i)
+    setStatus(filtered);
   }
 
+  const updateState = (index) => {
+    let newState = state;
+    newState[index].check = !state[index].check;
+    setStatus(newState);
+  }
+  
   return (
     <div className="checklist-container">
       <div className="box5">
         <div className="btn-container">
-          <button className="reset-btn glass animal" onClick={()=> reset}>RESET</button>
-          <button className="delete-btn glass celebrity" onClick={()=>setStatus(display)}>DELETE</button>
+          <button className="reset-btn glass animal" onClick={reset}>RESET</button>
+          <button className="delete-btn glass celebrity" onClick={reRender}>DELETE</button>
         </div>
         <ul>
-          {renderItems(checklist)}
+          {renderItems(state)}
         </ul>
       </div>
     </div>
