@@ -1,0 +1,61 @@
+.algolia-container{
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding: 20px;
+  background-image: linear-gradient(to bottom right, rgb(255, 148, 232), rgb(255, 2, 78));
+  justify-content: center;
+  align-items: center;
+}
+
+.box8{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+  min-height: 100vh;
+  height: auto;
+  width: 90vw;
+  border: 1px solid rgb(255, 203, 252);
+  box-shadow: 0 0 10px rgb(255, 162, 255);
+}
+
+
+.algolia-search-container{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background-image: linear-gradient(to bottom right, rgba(195, 111, 125, 0.2), rgba(0, 143, 19, 0.2));
+  border-bottom: 2px solid rgb(40, 237, 255);
+  box-shadow: 0 0 5px rgb(144, 255, 218);
+}
+.algolia-search-container>*{
+  margin: 5px 15px;
+}
+
+.algolia-label{
+  font-size: 1.5rem;
+  text-shadow: -1px 0 rgb(255, 141, 255), 0 1px rgb(81, 131, 0), 1px 0 rgb(81, 131, 0), 0 -1px rgb(81, 131, 0);
+  color: #fff;
+}
+.algolia-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  height: 31px;
+}
+
+#algolia-search{
+  width: 50vw;
+}
+
+.links-list{
+  margin: 15px;
+  font-size: large;
+  text-align: left;
+  width: 90%;
+  height: 100%;
+  color: rgb(242, 198, 248);
+}

@@ -26,6 +26,7 @@ import Time from './components/ex18.3-whats_the_time/Time';
 import CheckList from './components/ex18.4-marking_and_deleting/CheckList';
 // import SimpleFetch from './components/ex19.1-simple_fetch/SimpleFetch';
 import Countries from './components/ex19.2-countries_of_the_world/Countries';
+import Algolia from './components/ex19.3-algolia_api/Algolia';
 import './App.css';
 
 function App() {
@@ -86,6 +87,8 @@ function App() {
       <SimpleFetch/> */}
       <hr/>
       <Countries/>
+      <hr/>
+      <Algolia/>
     </div>
   );
 }
