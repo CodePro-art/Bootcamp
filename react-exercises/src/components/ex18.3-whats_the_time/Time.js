@@ -7,24 +7,13 @@ export default function Time() {
   const [time,setTime] = useState('');
   const types = ["seconds","minutes","hours"];
   const mult = [60,1,1/60];
-  const mult2 = [1/60,1,60];
 
-  const updateTime = result => {
-    console.log(result);
-    setTime(result);
-  };
+  const updateTime = result => setTime(result);
 
   const renderTime = (arr,time) => 
     arr.map((e,i) => 
-      <TimeItem 
-        key={i.toString()}
-        type={e} 
-        time={time*mult[i]}
-        multiplyer={mult2[i]}
-        sendTime={updateTime}
-      />
-    );
-
+      <TimeItem key={i.toString()} type={e} time={time*mult[i]}multiplyer={mult.reverse()[i]} sendTime={updateTime}/>);
+    
   return (
     <div className="time-container">
       <div className="box1">
