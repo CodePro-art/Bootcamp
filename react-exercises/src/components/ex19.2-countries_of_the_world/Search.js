@@ -11,8 +11,8 @@ export default function Search(props) {
   return (
     <div className="search-container">
       <label className="countries-label" htmlFor="countries-search">Search:</label>
-      <input type="text" id="countries-search" onChange={(e) => setInput(e.target.value) }/>
-      <button className="meaning-btn money glass countries-btn" onClick={callback()}>Search</button>
+      <input autoComplete="off" type="text" id="countries-search" onChange={(e) => setInput(e.target.value) }/>
+      <button className="meaning-btn money glass countries-btn" onClick={callback}>Search</button>
     </div>
   )
 }

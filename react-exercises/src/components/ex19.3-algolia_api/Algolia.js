@@ -4,33 +4,42 @@ import axios from 'axios';
 import './Algolia.css';
 
 export default function Algolia() {
-  const path = `https://hn.algolia.com/api/v1/search?query={hooks}`;
+  let string = 'hooks';
+  let path = `https://hn.algolia.com/api/v1/search?query=`;
+
   const [results,setResults] = useState([]);
-  let string = '';
+  const [endpoint,setEndpoint] = useState(path + string);
 
   useEffect(() => {
     const search = async () => {
       try{
-        const {data} = await axios.get(path)
+        const {data} = await axios.get(endpoint)
         setResults(data.hits);
       }catch(e){
         console.log(e);
       }
     }
     search();
-  }, [results])
+  }, [endpoint])
   
-  const renderLinks = arr => arr.map((e,i) => <li key={i.toString()}><a href={e.url}>{e.title}</a></li>)
+  const renderLinks = arr => 
+    Array.isArray(arr) && !arr.length ?
+    <h2 className="animate">Loading</h2>
+    : arr.map((e,i) => <li key={i.toString()}><a href={e.url}>{e.title}</a></li>)
+  
+  const setString = str => {
+    string = str;
+    setEndpoint(path + string)
+  }
 
   return (
     <div className="algolia-container">
       <div className="box8">
-        <Search sendInput={()=>{}}/>
+        <Search sendInput={setString}/>
         <div className="links-list">
           {renderLinks(results)}
         </div>
       </div>
-      
     </div>
   )
 }

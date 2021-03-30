@@ -11,6 +11,7 @@ export default function Countries() {
   let string = '';
 
   useEffect(() => {
+    console.log("ok");
     const search = async () => {
       try{
         const {data} = await axios.get(path)
@@ -20,17 +21,17 @@ export default function Countries() {
       }
     }
     search();
-  }, [results])
+  }, [])
 
   const renderList = arr => arr.filter(e => e.name.toLowerCase().includes(string.toLowerCase()))
   .map(e => <li key={e.alpha3Code}>{e.name}</li>)
 
-  const setString = str => string = str;
+  const filterCountries = str => string = str;
 
   return (
     <div className="countries-container">
       <div className="box7">
-        <Search sendInput={setString}/>
+        <Search sendInput={filterCountries}/>
         <div className="countries-list">
           {renderList(results)}
         </div>
