@@ -37,7 +37,6 @@ export default class ChuckNorris extends Component {
     }
   }
   
-
   render() {
     const buttons = this.state.categories.map((c,i) => {
       return <button 

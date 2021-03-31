@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 export default function TimeItem(props) {
 
@@ -15,7 +15,11 @@ export default function TimeItem(props) {
       props.sendTime(time*props.converter)
     }
   }
-  
+
+  useEffect(() => {
+    setInput(props.time)
+  }, [props.time])
+
   return (
     <div className="time-item">
       <label className="time-label" htmlFor={props.type}> 
@@ -26,7 +30,7 @@ export default function TimeItem(props) {
         type="text" 
         className="time-input" 
         id={props.type}
-        value={props.time}
+        value={input}
         autoComplete="off"
         onClick={(e)=>{e.target.select()}}
         onChange={(e) => callback(e.target.value) }

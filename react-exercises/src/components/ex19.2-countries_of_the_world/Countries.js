@@ -8,10 +8,10 @@ export default function Countries() {
   const path = "https://restcountries.eu/rest/v2/all";
 
   const [results,setResults] = useState([]);
-  let string = '';
+  const [data,setData] = useState([]);
+  const [string,setStr] = useState('');
 
   useEffect(() => {
-    console.log("ok");
     const search = async () => {
       try{
         const {data} = await axios.get(path)
@@ -23,17 +23,21 @@ export default function Countries() {
     search();
   }, [])
 
-  const renderList = arr => arr.filter(e => e.name.toLowerCase().includes(string.toLowerCase()))
-  .map(e => <li key={e.alpha3Code}>{e.name}</li>)
+  useEffect(() => {
+    setData(results.filter(e => e.name.toLowerCase().includes(string.toLowerCase())))
+  }, [string,results])
 
-  const filterCountries = str => string = str;
+  const renderList = arr => arr.map(e => <li key={e.alpha3Code}>{e.name}</li>)
+
+  const setString = str => setStr(str)
+
 
   return (
     <div className="countries-container">
       <div className="box7">
-        <Search sendInput={filterCountries}/>
+        <Search sendInput={setString}/>
         <div className="countries-list">
-          {renderList(results)}
+          {renderList(data)}
         </div>
       </div>
     </div>

@@ -27,6 +27,7 @@ import CheckList from './components/ex18.4-marking_and_deleting/CheckList';
 // import SimpleFetch from './components/ex19.1-simple_fetch/SimpleFetch';
 import Countries from './components/ex19.2-countries_of_the_world/Countries';
 import Algolia from './components/ex19.3-algolia_api/Algolia';
+import Chuck from './components/ex19.4- refactor_fetch_with_hooks/Chuck';
 import './App.css';
 
 function App() {
@@ -89,6 +90,8 @@ function App() {
       <Countries/>
       <hr/>
       <Algolia/>
+      <hr/>
+      <Chuck/>
     </div>
   );
 }
