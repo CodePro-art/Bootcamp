@@ -1,0 +1,24 @@
+.cancel-container{
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding: 20px;
+  background-image: linear-gradient(to bottom right, rgb(240, 240, 240), rgb(190, 190, 190));
+  justify-content: center;
+  align-items: center;
+}
+.axios-leak-container{
+  background-color: rgb(243, 243, 243);
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  box-shadow: 0 0 3px black;
+}
+.axios-leak-title{
+  font-size: large;
+  font-family: cursive;
+  margin-bottom: 15px;
+}
