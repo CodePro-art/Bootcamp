@@ -31,6 +31,7 @@ import Chuck from './components/ex19.4- refactor_fetch_with_hooks/Chuck';
 import Cancel from './components/ex20.1-cancel_request/Cancel';
 import Edit from './components/ex21.1-editing/Edit';
 import Video from './components/ex21.2-play_pause_video/Video';
+import ImageToggle from './components/ex21.3-image_toggle/ImageToggle';
 import './App.css';
 
 function App() {
@@ -101,6 +102,8 @@ function App() {
       <Edit/>
       <hr/>
       <Video/>
+      <hr/>
+      <ImageToggle/>
     </div>
   );
 }
