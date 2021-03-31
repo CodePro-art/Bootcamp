@@ -29,6 +29,8 @@ import Countries from './components/ex19.2-countries_of_the_world/Countries';
 import Algolia from './components/ex19.3-algolia_api/Algolia';
 import Chuck from './components/ex19.4- refactor_fetch_with_hooks/Chuck';
 import Cancel from './components/ex20.1-cancel_request/Cancel';
+import Edit from './components/ex21.1-editing/Edit';
+import Video from './components/ex21.2-play_pause_video/Video';
 import './App.css';
 
 function App() {
@@ -95,6 +97,10 @@ function App() {
       <Chuck/>
       <hr/>
       <Cancel/>
+      <hr/>
+      <Edit/>
+      <hr/>
+      <Video/>
     </div>
   );
 }
