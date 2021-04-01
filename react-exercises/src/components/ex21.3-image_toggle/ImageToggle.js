@@ -34,12 +34,21 @@ export default function ImageToggle() {
 
   return (
     <div className="image-toggle-container">
-      <img src={bwBird} ref={ref1} alt="bwBird"  
-        onMouseEnter={() => changeSource(ref1)}  
-        onMouseLeave={() => changeSource(ref1)}/>
-      <img src={bwFire} ref={ref2} alt="bwFire"
-        onMouseEnter={() => changeSource(ref2)}  
-        onMouseLeave={() => changeSource(ref2)}/>
+      <div className="rainbow-wrapper">
+        <h1 className="gradient-text">Black and White</h1>
+        <h2 className="gradient-text">Hover the images to invoke colors</h2>
+        <p className="gradient-text">This app implements react ref system</p>
+      </div>
+      
+      <div className="image-container">
+        <img className="img-bw-c" src={bwBird} ref={ref1} alt="bwBird" 
+          onMouseEnter={() => changeSource(ref1)}  
+          onMouseLeave={() => changeSource(ref1)}/>
+        <img className="img-bw-c" src={bwFire} ref={ref2} alt="bwFire"
+          onMouseEnter={() => changeSource(ref2)}  
+          onMouseLeave={() => changeSource(ref2)}/>
+      </div>
+      
     </div>
   )
 }

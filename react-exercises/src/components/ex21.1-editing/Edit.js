@@ -16,7 +16,7 @@ export default function Edit() {
   },[edit])
   
   const renderInput = () => edit? null : <input type="text" ref={ref1}/>
-  const renderButton = () => edit? <input type="button" ref={ref2} value="Edit" onClick={focusInput}/> : <input type="button" ref={ref2} value="Save" onClick={focusInput}/>
+  const renderButton = () => edit? <input className="elegant-btn" type="button" ref={ref2} value="Edit" onClick={focusInput}/> : <input className="elegant-btn" type="button" ref={ref2} value="Save" onClick={focusInput}/>
 
   return (
     <div className="edit-container">

@@ -1,8 +1,65 @@
 .image-toggle-container{
   display: flex;
   justify-content: center;
-  background-image: linear-gradient(to bottom right, rgb(255, 0, 212), rgb(255, 0, 64));
-  color: aliceblue;
+  align-items: center;
+  flex-direction: column;
+  background-image: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(190, 190, 190));
   font-size: 20px;
   font-family: cursive;
+  height: 100vh;
+}
+
+.image-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  width: auto;
+  background-image: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(190, 190, 190));
+  border: 1px solid black;
+  margin: 20px;
+  box-shadow: 0 0 5px rgb(39, 39, 39);
+}
+
+.img-bw-c{
+  margin: 10px auto;
+  width: 40%;
+  height: 90%;
+  transition: .3s;
+  box-shadow: 0 0 5px rgb(39, 39, 39);
+}
+
+.img-bw-c:hover{
+  box-shadow: 0 0 8px rgb(39, 39, 39);
+}
+.rainbow-wrapper{width:100%;}
+.gradient-text{
+  background: linear-gradient(165deg, 
+  rgb(255, 0, 0) 0%,
+  rgb(255, 0, 76) 10%,
+  rgb(255, 0, 170) 20%,
+  rgb(174, 53, 255) 30%,
+  rgb(98, 0, 255) 40%, 
+  rgb(0, 4, 255) 50%,
+  rgb(0, 225, 255) 60%,
+  rgb(0, 255, 170) 70%,
+  rgb(0, 255, 34) 80%,
+  rgb(255, 230, 0) 90%,  
+  rgb(255, 157, 0) 100%);
+  background-size: 200% 200%;
+  animation: rainbow 2s ease-in-out infinite;
+  background-clip: text;
+  -webkit-background-clip:text;
+  color:rgba(0,0,0,1);
+  text-align:center;
+  transition: color .2s ease-in-out;
+  text-transform:uppercase;
+}
+.gradient-text:hover{
+  color:rgba(0,0,0,0);
+}
+@keyframes rainbow { 
+  0%{background-position:left}
+  50%{background-position:right}
+  100%{background-position:left}
 }
