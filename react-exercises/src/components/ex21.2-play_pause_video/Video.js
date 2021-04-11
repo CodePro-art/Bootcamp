@@ -10,8 +10,8 @@ export default function Video() {
 
   return (
     <div className="video-container">
-      <input type="button" onClick={stopVideo} value="stop"/>
-      <input type="button" onClick={playVideo} value="play"/>
+      <input className="video-button" type="button" onClick={stopVideo} value="stop"/>
+      <input className="video-button" type="button" onClick={playVideo} value="play"/>
       <ReactPlayer url="https://youtu.be/vOXZkm9p_zY"
         width="100%"
         pip={true}
